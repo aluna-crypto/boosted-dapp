@@ -2,11 +2,11 @@ import { useCallback, useState, useEffect } from "react";
 
 import { useWallet } from "use-wallet";
 import { provider } from "web3-core";
-import { stakedAmount } from "../utils/pools";
-import BigNumber from "bignumber.js";
+import { stakedAmount } from "../utils/boost";
+import BN from "bignumber.js";
 
-const useStakedAmount = (poolAddress: string) => {
-  const [amount, setAmount] = useState(new BigNumber(0));
+export const useStakedAmount = (poolAddress: string) => {
+  const [amount, setAmount] = useState(new BN("0"));
   const {
     account,
     ethereum,
@@ -14,15 +14,15 @@ const useStakedAmount = (poolAddress: string) => {
 
   const fetchStakedAmount = useCallback(async () => {
     if (account) {
-      const amount = await stakedAmount(ethereum, poolAddress, account);
-      setAmount(new BigNumber(amount));
+      const amount = new BN(await stakedAmount(ethereum, poolAddress, account));
+      setAmount(amount);
     }
   }, [account, ethereum, poolAddress]);
 
   useEffect(() => {
     if (account && ethereum) {
       fetchStakedAmount();
-      const refreshInterval = setInterval(fetchStakedAmount, 10000);
+      const refreshInterval = setInterval(fetchStakedAmount, 5000);
       return () => clearInterval(refreshInterval);
     } else {
       return;
@@ -31,5 +31,3 @@ const useStakedAmount = (poolAddress: string) => {
 
   return amount;
 };
-
-export default useStakedAmount;

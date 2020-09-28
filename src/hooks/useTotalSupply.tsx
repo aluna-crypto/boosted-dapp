@@ -1,26 +1,24 @@
 import { useCallback, useEffect, useState } from "react";
 
-import BigNumber from "bignumber.js";
+import BN from "bignumber.js";
 import { useWallet } from "use-wallet";
 import { provider } from "web3-core";
 
-import { getTotalSupply } from "../utils/erc20";
+import { getTotalSupply } from "src/utils/boost";
 
 export const useTotalSupply = () => {
-  const [totalSupply, setTotalSupply] = useState(new BigNumber(0));
-  const {
-    ethereum,
-  }: { account: string | null; ethereum: provider } = useWallet();
+  const [totalSupply, setTotalSupply] = useState(new BN(0));
+  const { ethereum }: { ethereum: provider } = useWallet();
 
   const fetchTotalSupply = useCallback(async () => {
-    const totalSupply = await getTotalSupply(ethereum);
-    setTotalSupply(new BigNumber(totalSupply));
+    const totalSupply = new BN(await getTotalSupply(ethereum));
+    setTotalSupply(totalSupply);
   }, [ethereum]);
 
   useEffect(() => {
     if (ethereum) {
       fetchTotalSupply();
-      const refreshInterval = setInterval(fetchTotalSupply, 10000);
+      const refreshInterval = setInterval(fetchTotalSupply, 30000);
       return () => clearInterval(refreshInterval);
     } else {
       return;

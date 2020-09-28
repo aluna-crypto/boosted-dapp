@@ -1,11 +1,9 @@
-// export const boostToken = "0x6347E1d08015abb60952e7d1f24551b5762f2a44";
-// export const kovanDaiPool = "0x6d45157D4a6345266cd2B4f24803B29c8Ad3C521";
-// export const kovanWETHPool = "0x3c943BBe120DfD55721a6fB3068D27CfaEaB3aa5";
-// export const kovanUniswapLPPool = "0x10a8f94FAE63E99cC822d312Fe0Cba7eb44bD2b4";
-export const kovanGovernance = "0xfbf19c4a71d71348748d828bb01a77faa6ce4bd6";
+//Governance Contract
+export const governanceContract = "0xc3859cb576f7e8a0a8537a5ce4700c95802daf81";
+export const treasuryV2Contract = "0x71151b7AE78459093f1B29583f2B24aEF603cB70";
 
 //Boost token
-export const boostToken = "0x3e780920601D61cEdb860fe9c4a90c9EA6A35E78";
+export const boostToken = "0x3e780920601d61cedb860fe9c4a90c9ea6a35e78";
 
 // Treasury token holds yCRV
 export const yCRVToken = "0xdf5e0e81dff6faf3a7e52ba697820c5e32d806a8";
@@ -21,6 +19,14 @@ export const yfiPool = "0x3EE27441449B2DfC705E3C237FFd75826870120A";
 export const linkPool = "0x57fbd512a440CCE6832c62fD63c54A0A9f545F8a";
 export const bandPool = "0x3080869CF796d944cB4fb3C47D7084f8E8D3d22a";
 export const sushiPool = "0xC7491fcDfc8af10d5a8Bc9C13b60B85209C0dc59";
+export const uniswapPool = "0x8851d9b6c913309225947dda16e82e1854198c1e";
+// Wave 3 Pool Addresses
+export const uniswapPoolV2 = "0x115b9f50f6a13c70792737e2c2990e7b7ac5ea28";
+export const yfiBoostPool = "0x06281eb6014bED89bD9f252f72796a6cbe7349d8";
+export const usdcBoostPool = "0x80128f108922482C5d2dfe745AF1d89D7Cf39BDC";
+export const creamBoostPool = "0x32C21af450d9905151e9cE28a430d4FDAb11b261";
+export const sushiBoostPool = "0xDf1731418e1f8bF2FE336732355d35917aFD9267";
+export const uniBoostPool = "0xfb4468f90991a7b4e9af7ef33e5603d8ea99f2ad";
 
 // ERC20 Token Address of supported pools
 export const yfiToken = "0x0bc529c00c6401aef6d220be8c6ea1667f6ad93e";
@@ -33,3 +39,15 @@ export const lendToken = "0x80fb784b7ed66730e8b1dbd9820afd29931aab03";
 export const snxToken = "0xc011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f";
 export const mkrToken = "0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2";
 export const renToken = "0x408e41876cccdc0f92210600ef50372656052a38";
+export const uniswapLPToken = "0x6b4a0bd2eee3ca06652f758844937daf91ea8422";
+export const wethToken = "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2";
+export const usdcToken = "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48";
+export const creamToken = "0x2ba592F78dB6436527729929AAf6c908497cB200";
+export const uniToken = "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984";
+
+// Wave 3 Pool Tokens + old uniswapLPToken
+export const uniswapBoostToken = "0x004e74ff81239c8f2ec0e2815defb970f3754d86";
+export const yfiBoostToken = "0xd3a38eaeae085b04d4da3614c870c3b985067c40";
+export const sushiBoostToken = "0x53b0a526e67aec8f151297f8b6b20d0d8a7b9129";
+export const usdcBoostToken = "0xc0f0ab9767ec5117cc640127255fad744ddc55b0";
+export const creamBoostToken = "0xafd541e91b5bf792ae36f7ea1213c878e6feb1d3";
