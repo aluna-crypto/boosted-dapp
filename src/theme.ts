@@ -21,4 +21,8 @@ const customTheme = {
   breakpoints,
 };
 
+customTheme.colors.purple['200'] = '#7547dc'
+customTheme.colors.purple['300'] = '#ccff00'
+
+console.log("customTheme ->", customTheme)
 export default customTheme;

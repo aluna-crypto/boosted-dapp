@@ -4,7 +4,7 @@ const ENVIROMENTS = {}
 
 ENVIROMENTS.development = {
   ENV: 'development',
-  ETHEREUM_CHAIN_ID: '33'
+  ETHEREUM_CHAIN_ID: '42'
 }
 
 ENVIROMENTS.staging = {

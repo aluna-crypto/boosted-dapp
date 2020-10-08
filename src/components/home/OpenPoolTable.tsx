@@ -173,7 +173,7 @@ export const OpenPoolTable: React.FC = () => {
                     size="sm"
                     fontSize="sm"
                     fontWeight="medium"
-                    colorScheme="green"
+                    colorScheme="purple"
                   >
                     Stake/Boost
                   </Button>
