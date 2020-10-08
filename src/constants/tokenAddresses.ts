@@ -1,15 +1,15 @@
 //Governance Contract
-export const governanceContract = "0xc3859cb576f7e8a0a8537a5ce4700c95802daf81";
-export const treasuryV2Contract = "0x71151b7AE78459093f1B29583f2B24aEF603cB70";
+export const governanceContract = "0xc552E38E1E999d93AAF1dB2E6A9E57ba6a17C801";
+export const treasuryV2Contract = "0xf5fF7a31e1aE3028DfFD2071F3DeAedBe739dDe8";
 
 //Boost token
-export const boostToken = "0x3e780920601d61cedb860fe9c4a90c9ea6a35e78";
+export const boostToken = "0xc5c9b8cdA6d3cF94fCB72E65F871cc88aCB0f747";
 
 // Treasury token holds yCRV
-export const yCRVToken = "0xdf5e0e81dff6faf3a7e52ba697820c5e32d806a8";
+export const yCRVToken = "0xedf768ed8802b4bA1Fac7AC0701a39659Ace1472";
 
 // Pool Contract Addresses
-export const compPool = "0x39CD2Fc7BAc954ABc3C1b6dA1CD467fA44f4f3BD";
+export const compPool = "0x2ce13ce976419a9f3f581eB945D11C5d081B384E";
 export const mkrPool = "0x40aFeF1b846D0a4EEf601Cf2B2117468eF63643C";
 export const lendPool = "0x383F3Ba9B39011f658e55a4c24c648851A4A8b60";
 export const snxPool = "0xf8Cb70658F7eC2bdC51d65323300b4cd0B5c6301";

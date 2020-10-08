@@ -1,27 +1,29 @@
-import React, { useState, useEffect } from "react";
 import {
-  ChakraProvider,
+  Box, ChakraProvider,
   CSSReset,
-  Box,
-  Heading,
+
+
+
+
+  Flex, Heading,
   Image,
-  Text,
-  Flex,
+  Text
 } from "@chakra-ui/core";
-import theme from "../theme";
-import { MarqueeComponent } from "src/components/general/Marquee";
-import { Header } from "src/components/general/Header";
-import { NewsBlock } from "src/components/general/NewsBlock";
-import { Footer } from "src/components/general/Footer";
-import { CTA } from "src/components/general/CTA";
+import Router from "next/router";
+import React, { useEffect, useState } from "react";
 import { Container } from "src/components/general/Container";
-import { UseWalletProvider } from "use-wallet";
+import { CTA } from "src/components/general/CTA";
+import { Footer } from "src/components/general/Footer";
+import { Header } from "src/components/general/Header";
+import { MarqueeComponent } from "src/components/general/Marquee";
+import { NewsBlock } from "src/components/general/NewsBlock";
+import { Socials } from "src/components/general/Socials";
 import { ModalContext } from "src/context/ModalContext";
 import { PoolProvider } from "src/context/PoolContext";
 import { PriceFeedProvider } from "src/context/PriceFeedContext";
-import { Socials } from "src/components/general/Socials";
 import { useWeb3Presence } from "src/hooks/useWeb3Presence";
-import Router from "next/router";
+import { UseWalletProvider } from "use-wallet";
+import theme from "../theme";
 
 function MyApp({ Component, pageProps }) {
   const [changingRoute, setChangingRoute] = useState<boolean>(false);
@@ -49,7 +51,7 @@ function MyApp({ Component, pageProps }) {
       <CSSReset />
       <PriceFeedProvider>
         <UseWalletProvider
-          chainId={1}
+          chainId={42}
           connectors={{
             walletconnect: { rpcUrl: "https://mainnet.eth.aragon.network/" },
           }}

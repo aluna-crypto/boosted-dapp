@@ -1,20 +1,20 @@
-import React, { useState, useCallback, useEffect } from "react";
-import { Stack, Flex, Button, Text } from "@chakra-ui/core";
-import { getDisplayBalance } from "src/utils/formatBalance";
-import { useTokenBalance } from "src/hooks/useTokenBalance";
+import { Button, Flex, Stack, Text } from "@chakra-ui/core";
+import BN from "bignumber.js";
+import formatCurrency from "format-currency";
+import React, { useCallback, useEffect, useState } from "react";
 import { boostToken } from "src/constants/tokenAddresses";
-import { useAllowance } from "src/hooks/useAllowance";
 import { IPool } from "src/context/PoolContext";
+import { usePriceFeedContext } from "src/context/PriceFeedContext";
+import { useAllowance } from "src/hooks/useAllowance";
 import { useApprove } from "src/hooks/useApprove";
-
+import { useGetBoostedBalances } from "src/hooks/useBoostedBalances";
 import { useBoost } from "src/hooks/useBooster";
 import { useGetBoosterBalance } from "src/hooks/useBoosterCount";
-import BN from "bignumber.js";
 import { useGetNextBoosterAvailable } from "src/hooks/useNextBoosterAvailable";
+import { useTokenBalance } from "src/hooks/useTokenBalance";
+import { getDisplayBalance } from "src/utils/formatBalance";
 import { formatTimestamp } from "src/utils/formatTimestamp";
-import { usePriceFeedContext } from "src/context/PriceFeedContext";
-import formatCurrency from "format-currency";
-import { useGetBoostedBalances } from "src/hooks/useBoostedBalances";
+
 
 interface BoostPanelProps {
   pool: IPool;
@@ -41,7 +41,7 @@ export const BoostPanel: React.FC<BoostPanelProps> = ({ pool }) => {
         contract_addresses: [boostToken],
         vs_currencies: "usd",
       });
-      const priceInUSD = new BN(data[boostToken.toLowerCase()].usd);
+      const priceInUSD = new BN(1) //new BN(data[boostToken.toLowerCase()].usd);
 
       setUSDBoosterPrice(
         pool.boosterPrice
