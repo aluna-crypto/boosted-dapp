@@ -30,5 +30,7 @@ const customTheme = {
 customTheme.colors.purple['200'] = '#7547dc'
 customTheme.colors.purple['300'] = '#ccff00'
 
-console.log("customTheme ->", customTheme)
+// uncomment to see everything from the theme
+// console.log("customTheme ->", customTheme)
+
 export default customTheme;

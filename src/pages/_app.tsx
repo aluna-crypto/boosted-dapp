@@ -23,6 +23,8 @@ import { Socials } from "src/components/general/Socials";
 import { useWeb3Presence } from "src/hooks/useWeb3Presence";
 import Router from "next/router";
 
+console.log("env: ", process.env.ENV)
+
 function MyApp({ Component, pageProps }) {
   const [changingRoute, setChangingRoute] = useState<boolean>(false);
   const web3Present = useWeb3Presence();

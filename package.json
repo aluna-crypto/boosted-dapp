@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "dev:start": "next start",
     "start": "next start -p $PORT",
     "lint": "eslint ./src"
   },

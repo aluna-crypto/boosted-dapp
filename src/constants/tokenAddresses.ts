@@ -1,12 +1,12 @@
 //Governance Contract
-export const governanceContract = "0xc3859cb576f7e8a0a8537a5ce4700c95802daf81";
-export const treasuryV2Contract = "0x71151b7AE78459093f1B29583f2B24aEF603cB70";
+export const governanceContract = process.env.GOVERNANCE_CONTRACT || '';
+export const treasuryV2Contract = process.env.TREASURY_CONTRACT || '';
 
 //Boost token
-export const boostToken = "0x3e780920601d61cedb860fe9c4a90c9ea6a35e78";
+export const boostToken = process.env.BOOST_TOKEN || ''
 
 // Treasury token holds yCRV
-export const yCRVToken = "0xdf5e0e81dff6faf3a7e52ba697820c5e32d806a8";
+export const yCRVToken = process.env.YCRV_TOKEN || ''
 
 // Pool Contract Addresses
 export const compPool = "0x39CD2Fc7BAc954ABc3C1b6dA1CD467fA44f4f3BD";
@@ -20,6 +20,7 @@ export const linkPool = "0x57fbd512a440CCE6832c62fD63c54A0A9f545F8a";
 export const bandPool = "0x3080869CF796d944cB4fb3C47D7084f8E8D3d22a";
 export const sushiPool = "0xC7491fcDfc8af10d5a8Bc9C13b60B85209C0dc59";
 export const uniswapPool = "0x8851d9b6c913309225947dda16e82e1854198c1e";
+
 // Wave 3 Pool Addresses
 export const uniswapPoolV2 = "0x115b9f50f6a13c70792737e2c2990e7b7ac5ea28";
 export const yfiBoostPool = "0x06281eb6014bED89bD9f252f72796a6cbe7349d8";
