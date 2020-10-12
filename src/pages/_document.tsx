@@ -13,6 +13,12 @@ class MyDocument extends Document {
             as="font"
             crossOrigin=""
           />
+          <link
+            rel="preload"
+            href="/fonts/Roboto/Roboto-Medium.ttf"
+            as="font"
+            crossOrigin=""
+          />
           <link rel="shortcut icon" href="/images/favicon.ico" />
         </Head>
         <body>

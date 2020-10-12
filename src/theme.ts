@@ -1,4 +1,5 @@
 import theme from "@chakra-ui/theme";
+import React from 'React';
 
 const breakpoints = ["40em", "52em", "64em"];
 
@@ -10,15 +11,20 @@ const customTheme = {
   },
   colors: {
     ...theme.colors,
-    black: "#1A202C",
+    black: "#1d1d1c",
   },
   fonts: {
     ...theme.fonts,
-    body: "Formular-Mono",
-    heading: "Formular-Mono",
-    mono: "Formular-Mono",
+    body: "Roboto",
+    heading: "Roboto",
+    mono: "Roboto",
   },
   breakpoints,
+  icons: {
+    logo: {
+      // path: (<path d="..."/>) => string
+    }
+  }
 };
 
 customTheme.colors.purple['200'] = '#7547dc'

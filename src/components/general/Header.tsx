@@ -3,17 +3,22 @@ import { Flex, Heading, Link, Spinner } from "@chakra-ui/core";
 import { DarkModeSwitch } from "./DarkModeSwitch";
 import NextLink from "next/link";
 import { isMobile } from "react-device-detect";
+import { AlunaIcon } from './AlunaIcon';
 
 export const Header = ({ changingRoute }) => (
   <Flex
     my="16px"
     position="relative"
     justifyContent="space-between"
-    alignItems="center"
+    alignItems="baseline"
     width="100%"
+    bgImage="url('/images/farm.jpg')" 
+    bgPos="center" bgRepeat="no-repeat"
+    bgSize="100% 100%"
+    height="60vh"
   >
     <Flex flex="1" alignItems="center">
-      <Heading fontSize={"lg"}>🚀 {!isMobile && "B00STED FINANCE"}</Heading>
+      <Heading fontSize={"lg"} fontWeight="normal"> <AlunaIcon/> {!isMobile && "ALUNA X BOOST"}</Heading>
       {changingRoute && <Spinner ml={4} color="grey.500" size="sm" />}
     </Flex>
     <Flex flex="2" justifyContent="center">

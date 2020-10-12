@@ -56,8 +56,8 @@ function MyApp({ Component, pageProps }) {
         >
           <PoolProvider>
             <ModalContext>
+
               <Box>
-                <MarqueeComponent />
                 {!web3Present ? (
                   <Flex
                     direction="column"
@@ -83,9 +83,9 @@ function MyApp({ Component, pageProps }) {
                   </Flex>
                 ) : (
                   <Container>
+
                     <Header changingRoute={changingRoute} />
-                    <Socials />
-                    <NewsBlock />
+                  
                     <Component {...pageProps} />
                     <Footer />
                     <CTA />
@@ -101,6 +101,13 @@ function MyApp({ Component, pageProps }) {
         @font-face {
           font-family: "Formular-Mono";
           src: url("/fonts/Formular-Mono.ttf");
+          font-weight: normal;
+          font-style: normal;
+          font-display: swap;
+        }
+        @font-face {
+          font-family: "Roboto";
+          src: url("/fonts/Roboto/Roboto-Medium.ttf");
           font-weight: normal;
           font-style: normal;
           font-display: swap;
