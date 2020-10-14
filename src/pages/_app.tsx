@@ -10,7 +10,6 @@ import {
 } from "@chakra-ui/core";
 import theme from "../theme";
 import { Header } from "src/components/general/Header";
-import { Footer } from "src/components/general/Footer";
 import { CTA } from "src/components/general/CTA";
 import { Container } from "src/components/general/Container";
 import { UseWalletProvider } from "use-wallet";
@@ -86,7 +85,7 @@ function MyApp({ Component, pageProps }) {
                     <Header changingRoute={changingRoute} />
                   
                     <Component {...pageProps} />
-                    <Footer />
+                    
                     <CTA />
                   </Container>
                 )}
@@ -113,7 +112,7 @@ function MyApp({ Component, pageProps }) {
         }
         @font-face {
           font-family: "Roboto-Mono";
-          src: url("/fonts/Roboto/Roboto-Mono-Regular.ttf");
+          src: url("/fonts/Roboto_Mono/static/RobotoMono-Regular.ttf");
           font-weight: normal;
           font-style: normal;
           font-display: swap;

@@ -21,7 +21,7 @@ class MyDocument extends Document {
           />
           <link
             rel="preload"
-            href="/fonts/Roboto/Roboto-Mono-Regular.ttf"
+            href="/fonts/Roboto_Mono/static/RobotoMono-Regular.ttf"
             as="font"
             crossOrigin=""
           />

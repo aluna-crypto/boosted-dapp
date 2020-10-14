@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  Button,
   Text,
   Image,
   Flex,
@@ -16,6 +15,7 @@ import { useWallet } from "use-wallet";
 import formatCurrency from "format-currency";
 import BN from "bignumber.js";
 import Link from "next/link";
+import { ThemedButton } from '../general/ThemedButton';
 
 /**
  * Represents tabular data - that is, information presented in a
@@ -169,14 +169,13 @@ export const OpenPoolTable: React.FC = () => {
             <TableCell textAlign="right">
               {!!account && (
                 <Link href="/pool/[id]" as={`/pool/${e.code}`}>
-                  <Button
+                  <ThemedButton
                     size="sm"
                     fontSize="sm"
                     fontWeight="medium"
-                    colorScheme="purple"
                   >
                     Stake/Boost
-                  </Button>
+                  </ThemedButton>
                 </Link>
               )}
             </TableCell>

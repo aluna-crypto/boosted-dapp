@@ -2,16 +2,22 @@ import React from "react";
 import { Flex, Heading, Link, Spinner } from "@chakra-ui/core";
 import { DarkModeSwitch } from "./DarkModeSwitch";
 import NextLink from "next/link";
-// import { isMobile } from "react-device-detect";
+import { useRouter } from "next/router";
 
-export const Header = ({ changingRoute }) => (
+export const Header = ({ changingRoute }) => {
+  const router = useRouter();
+  return (
   <Flex
     my="16px"
     position="relative"
     justifyContent="space-between"
     alignItems="baseline"
     width="100%"
-    bgImage="url('/images/farm.jpg')" 
+    bgImage={
+      router.pathname == "/about" ?
+      "url('/images/farmplants.jpg')" :
+      "url('/images/farm.jpg')"
+    } 
     bgPos="center" bgRepeat="no-repeat"
     bgSize="100% 100%"
     height="60vh"
@@ -36,16 +42,15 @@ export const Header = ({ changingRoute }) => (
           HOME
         </Link>
       </NextLink>
-      <Link
-        as="a"
-        target="_blank"
-        href="https://medium.com/@BoostedFinance/boosted-finance-its-not-rocket-science-it-s-alpha-81acf4af2887"
-        fontSize={["sm", "lg"]}
-        m="4"
-        fontWeight="300"
-      >
-        ABOUT
-      </Link>
+      <NextLink href="/about">
+        <Link
+          fontSize={["sm", "lg"]}
+          m="4"
+          fontWeight="300"
+        >
+          ABOUT 
+        </Link>
+      </NextLink>
       <NextLink href="/vote">
         <Link fontSize={["sm", "lg"]} m="4" fontWeight="300">
           VOTE
@@ -56,4 +61,5 @@ export const Header = ({ changingRoute }) => (
       <DarkModeSwitch />
     </Flex>
   </Flex>
-);
+  );
+}

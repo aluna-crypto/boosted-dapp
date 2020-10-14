@@ -1,5 +1,4 @@
 import {
-  Button,
   Text,
   Image,
   Flex,
@@ -15,6 +14,7 @@ import { useExit } from "src/hooks/useExit";
 import { stakedAmount } from "src/utils/boost";
 import BN from "bignumber.js";
 import { provider } from "web3-core";
+import { ThemedButton } from '../general/ThemedButton';
 
 /**
  * Represents tabular data - that is, information presented in a
@@ -197,15 +197,14 @@ export const ClosedPoolTable: React.FC = () => {
                 </TableCell>
                 <TableCell textAlign="right">
                   {!!account && (
-                    <Button
+                    <ThemedButton
                       onClick={() => handleExit(e.address)}
                       size="sm"
                       fontSize="sm"
                       fontWeight="medium"
-                      colorScheme="red"
                     >
                       Exit All & Claim
-                    </Button>
+                    </ThemedButton>
                   )}
                 </TableCell>
               </TableRow>
