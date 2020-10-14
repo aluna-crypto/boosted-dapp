@@ -15,7 +15,13 @@ class MyDocument extends Document {
           />
           <link
             rel="preload"
-            href="/fonts/Roboto/Roboto-Medium.ttf"
+            href="/fonts/Roboto/Roboto-Regular.ttf"
+            as="font"
+            crossOrigin=""
+          />
+          <link
+            rel="preload"
+            href="/fonts/Roboto/Roboto-Mono-Regular.ttf"
             as="font"
             crossOrigin=""
           />

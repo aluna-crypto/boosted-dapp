@@ -7,7 +7,7 @@ export const DarkModeSwitch = () => {
   return (
     <Switch
       justifySelf="center"
-      color="green"
+      color="purple"
       isChecked={isDark}
       onChange={toggleColorMode}
     />

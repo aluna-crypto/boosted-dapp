@@ -17,7 +17,7 @@ const customTheme = {
     ...theme.fonts,
     body: "Roboto",
     heading: "Roboto",
-    mono: "Roboto",
+    mono: "Roboto-Mono",
   },
   breakpoints,
   icons: {
@@ -28,9 +28,10 @@ const customTheme = {
 };
 
 customTheme.colors.purple['200'] = '#7547dc'
-customTheme.colors.purple['300'] = '#ccff00'
+customTheme.colors.gray['800'] = customTheme.colors.black;
+// customTheme.colors.purple['300'] = '#ccff00'
 
 // uncomment to see everything from the theme
-// console.log("customTheme ->", customTheme)
+console.log("customTheme ->", customTheme)
 
 export default customTheme;

@@ -109,7 +109,14 @@ function MyApp({ Component, pageProps }) {
         }
         @font-face {
           font-family: "Roboto";
-          src: url("/fonts/Roboto/Roboto-Medium.ttf");
+          src: url("/fonts/Roboto/Roboto-Regular.ttf");
+          font-weight: normal;
+          font-style: normal;
+          font-display: swap;
+        }
+        @font-face {
+          font-family: "Roboto-Mono";
+          src: url("/fonts/Roboto/Roboto-Mono-Regular.ttf");
           font-weight: normal;
           font-style: normal;
           font-display: swap;

@@ -1,5 +1,6 @@
 import React, { useCallback } from "react";
 import { Button } from "@chakra-ui/core";
+import { ThemedButton } from "./ThemedButton";
 import { Container } from "./Container";
 import { useWallet } from "use-wallet";
 import { WalletSelectModal } from "./WalletSelectModal";
@@ -29,27 +30,25 @@ export const CTA: React.FC = () => {
       py={2}
     >
       {account ? (
-        <Button
+        <ThemedButton
           flexGrow={3}
           mx={2}
           onClick={() => onPresentAccountModal()}
           width="100%"
           variant="solid"
-          colorScheme="green"
         >
           {formatAddress(account)}
-        </Button>
+        </ThemedButton>
       ) : (
-        <Button
+        <ThemedButton
           onClick={() => handleUnlockClick()}
           flexGrow={3}
           mx={2}
           width="100%"
           variant="solid"
-          colorScheme="green"
         >
           UNLOCK WALLET
-        </Button>
+        </ThemedButton>
       )}
     </Container>
   );

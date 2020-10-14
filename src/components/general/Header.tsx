@@ -18,12 +18,22 @@ export const Header = ({ changingRoute }) => (
     height="60vh"
   >
     <Flex flex="1" alignItems="center">
-      <Heading fontSize={"lg"} fontWeight="normal"> <AlunaIcon/> {!isMobile && "ALUNA X BOOST"}</Heading>
+      <Heading 
+        fontSize={"lg"} 
+        fontWeight="normal"
+        bgImage="url('/images/AlunaSymbol.svg')"
+        bgPos="left"
+        bgSize="20px auto"
+        bgRepeat="no-repeat"
+        pl="30px"
+      >  
+        ALUNA <span style={{color:"#7547dc"}}>&#10005;</span> BOOST
+      </Heading>
       {changingRoute && <Spinner ml={4} color="grey.500" size="sm" />}
     </Flex>
     <Flex flex="2" justifyContent="center">
       <NextLink href="/">
-        <Link fontSize={["sm", "lg"]} m="4" fontWeight="600">
+        <Link fontSize={["sm", "lg"]} m="4" fontWeight="300">
           HOME
         </Link>
       </NextLink>
@@ -33,12 +43,12 @@ export const Header = ({ changingRoute }) => (
         href="https://medium.com/@BoostedFinance/boosted-finance-its-not-rocket-science-it-s-alpha-81acf4af2887"
         fontSize={["sm", "lg"]}
         m="4"
-        fontWeight="600"
+        fontWeight="300"
       >
         ABOUT
       </Link>
       <NextLink href="/vote">
-        <Link fontSize={["sm", "lg"]} m="4" fontWeight="600">
+        <Link fontSize={["sm", "lg"]} m="4" fontWeight="300">
           VOTE
         </Link>
       </NextLink>
