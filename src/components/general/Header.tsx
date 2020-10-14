@@ -1,6 +1,5 @@
 import React from "react";
 import { Flex, Heading, Link, Spinner } from "@chakra-ui/core";
-import { DarkModeSwitch } from "./DarkModeSwitch";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
 
@@ -58,7 +57,7 @@ export const Header = ({ changingRoute }) => {
       </NextLink>
     </Flex>
     <Flex flex="1" display="flex" justifyContent="flex-end">
-      <DarkModeSwitch />
+      
     </Flex>
   </Flex>
   );

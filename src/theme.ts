@@ -28,6 +28,7 @@ const customTheme = {
 
 customTheme.colors.purple['200'] = '#7547dc'
 customTheme.colors.gray['800'] = customTheme.colors.black;
+customTheme.colors.yellow['500'] = '#f5be23';
 // customTheme.colors.purple['300'] = '#ccff00'
 
 // uncomment to see everything from the theme
