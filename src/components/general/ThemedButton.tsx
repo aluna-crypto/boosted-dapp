@@ -1,8 +1,7 @@
-import React, { useCallback } from "react";
+import React from "react";
 import { Button } from "@chakra-ui/core";
-import theme from "../theme";
 
-export const ThemedButton: React.FC = (props) => {
+export const ThemedButton: typeof Button = (props) => {
 	return ( 
 		<Button 
 			colorScheme="purple" 

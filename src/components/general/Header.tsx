@@ -2,8 +2,7 @@ import React from "react";
 import { Flex, Heading, Link, Spinner } from "@chakra-ui/core";
 import { DarkModeSwitch } from "./DarkModeSwitch";
 import NextLink from "next/link";
-import { isMobile } from "react-device-detect";
-import { AlunaIcon } from './AlunaIcon';
+// import { isMobile } from "react-device-detect";
 
 export const Header = ({ changingRoute }) => (
   <Flex

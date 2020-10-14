@@ -1,5 +1,4 @@
 import theme from "@chakra-ui/theme";
-import React from 'React';
 
 const breakpoints = ["40em", "52em", "64em"];
 

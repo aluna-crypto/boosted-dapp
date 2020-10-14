@@ -1,5 +1,4 @@
 import React, { useCallback } from "react";
-import { Button } from "@chakra-ui/core";
 import { ThemedButton } from "./ThemedButton";
 import { Container } from "./Container";
 import { useWallet } from "use-wallet";
