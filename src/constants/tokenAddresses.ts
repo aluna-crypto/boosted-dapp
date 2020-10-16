@@ -3,10 +3,15 @@ export const governanceContract = process.env.GOVERNANCE_CONTRACT || '';
 export const treasuryV2Contract = process.env.TREASURY_CONTRACT || '';
 
 //Boost token
-export const boostToken = process.env.BOOST_TOKEN || ''
+export const boostToken = process.env.BOOST_TOKEN || '';
+export const boostTokenMainnet = process.env.BOOST_TOKEN_MAINNET || '';
 
 // Treasury token holds yCRV
-export const yCRVToken = process.env.YCRV_TOKEN || ''
+export const yCRVToken = process.env.YCRV_TOKEN || '';
+
+export const alunaPool  = process.env.ALN_POOL_1 || '';
+
+export const alunaToken  = process.env.ALN_TOKEN || '';
 
 // Pool Contract Addresses
 export const compPool = "0x39CD2Fc7BAc954ABc3C1b6dA1CD467fA44f4f3BD";

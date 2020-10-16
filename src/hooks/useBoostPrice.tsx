@@ -9,7 +9,8 @@ export const useBoostPrice = () => {
     if (coinGecko) {
       try {
         const { data } = await coinGecko.simple.fetchTokenPrice({
-          contract_addresses: boostToken,
+          // contract_addresses: boostToken,
+          contract_addresses: process.env.BOOST_TOKEN_MAINNET,
           vs_currencies: "usd",
         });
         const priceInUSD: number = data[boostToken.toLowerCase()].usd;
