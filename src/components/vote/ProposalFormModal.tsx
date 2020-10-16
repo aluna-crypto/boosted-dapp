@@ -45,10 +45,10 @@ export const ProposalFormModal: React.FC<ModalProps> = () => {
           ) : (
             <>
               <Text fontSize="sm">
-                View BFIP template{" "}
+                View AFIP template{" "}
                 <Text
                   as="a"
-                  href="https://github.com/Boosted-Finance/BFIPs"
+                  href="https://github.com/alunacrypto/ASIPs"
                   target="_blank"
                   textDecoration="underline"
                 >

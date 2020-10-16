@@ -118,12 +118,12 @@ export const StakingPanel: React.FC<StakingPanelProps> = ({ pool }) => {
           unstakeAmount={unstakeAmount}
         />
       )}
-      <Stack>
-        <Text fontSize="md" fontWeight="bold" py={8} as="u">
+      <Stack >
+        <Text fontSize="md" py={8} as="u">
           STAKING
         </Text>
         <Flex justifyContent="space-between">
-          <Text fontWeight="bold">
+          <Text>
             {pool.tokenTicker.toUpperCase()} Balance
           </Text>
           <Text>
@@ -186,11 +186,11 @@ export const StakingPanel: React.FC<StakingPanelProps> = ({ pool }) => {
       </Stack>
       <Divider py={4} />
       <Stack>
-        <Text fontSize="md" fontWeight="bold" py={8} as="u">
-          UNSTAKING/WITHDRAW
+        <Text fontSize="md" py={8} as="u">
+          UNSTAKING
         </Text>
         <Flex justifyContent="space-between">
-          <Text fontWeight="bold">{pool.tokenTicker.toUpperCase()} Staked</Text>
+          <Text>{pool.tokenTicker.toUpperCase()} Staked</Text>
           <Text>
             {getDisplayBalance(stakedAmount)} {pool.tokenTicker.toUpperCase()}
           </Text>
@@ -262,6 +262,7 @@ export const StakingPanel: React.FC<StakingPanelProps> = ({ pool }) => {
                 setExitType("exit"), setShowExitModal(true);
               }}
               colorScheme="red"
+              color="white"
             >
               Exit
             </Button>
@@ -269,11 +270,11 @@ export const StakingPanel: React.FC<StakingPanelProps> = ({ pool }) => {
         )}
         <Divider py={4} />
         <Stack spacing={4}>
-          <Text fontSize="md" fontWeight="bold" py={8} as="u">
+          <Text fontSize="md"py={8} as="u">
             CLAIM REWARDS
           </Text>
           <Flex justifyContent="space-between">
-            <Text fontWeight="bold">Rewards Claimable</Text>
+            <Text>Rewards Claimable</Text>
             <Text>{getDisplayBalance(rewardAmount)} BOOST</Text>
           </Flex>
           <Button

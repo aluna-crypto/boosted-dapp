@@ -35,8 +35,8 @@ export const Vote: React.FC = () => {
   }, [proposals, account]);
 
   return (
-    <Flex justifyContent="space-between" width="100%">
-      <Stack spacing="1.5rem" mr="4" mt="4" flex={1} width="100%">
+    <Flex mb={200} fontFamily="mono" justifyContent="space-between" width="100%">
+      <Stack  spacing="1.5rem" mr="4" mt="4" flex={1} width="100%">
         <Heading size="md">PROPOSALS</Heading>
         {account && (
           <Stack direction={["column", "column", "row"]} spacing={4}>
@@ -53,8 +53,8 @@ export const Vote: React.FC = () => {
         )}
         <Tabs variant="enclosed">
           <TabList mb="1em">
-            <Tab>Core</Tab>
-            <Tab>Community</Tab>
+            <Tab _selected={{ color: "yellow.500", borderColor: "yellow.500"}}>Core</Tab>
+            <Tab _selected={{ color: "yellow.500", borderColor: "yellow.500"}}>Community</Tab>
           </TabList>
           <TabPanels>
             <TabPanel w="100%">

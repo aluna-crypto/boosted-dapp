@@ -4,7 +4,7 @@ export const treasuryV2Contract = process.env.TREASURY_CONTRACT || '';
 
 //Boost token
 export const boostToken = process.env.BOOST_TOKEN || '';
-export const boostTokenMainnet = process.env.BOOST_TOKEN_MAINNET || '';
+export const boostTokenMainnet = process.env.BOOST_TOKEN_PRODUCTION || '';
 
 // Treasury token holds yCRV
 export const yCRVToken = process.env.YCRV_TOKEN || '';

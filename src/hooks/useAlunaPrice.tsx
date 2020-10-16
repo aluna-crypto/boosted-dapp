@@ -1,15 +1,17 @@
 import { useCallback, useEffect, useState } from "react";
 import { usePriceFeedContext } from "src/context/PriceFeedContext";
-// import { boostToken } from "src/constants/tokenAddresses";
+import { boostToken } from "src/constants/tokenAddresses";
 
-export const useBoostPrice = () => {
+export const useAlunaPrice = () => {
   const [price, setPrice] = useState<string>("0");
   const { coinGecko }: { coinGecko: any } = usePriceFeedContext();
 
-  // we always use BOOST address from production when fetching price
-  let boostToken = process.env.BOOST_TOKEN_PRODUCTION || "";
-
   const fetchPrice = useCallback(async () => {
+    // ALUNA PRICE is always 0.1 while we don't get listed on coingecko
+    // or have a better price to use as placeholder
+    setPrice("0.1");
+
+    return;
     if (coinGecko) {
       try {
         const { data } = await coinGecko.simple.fetchTokenPrice({

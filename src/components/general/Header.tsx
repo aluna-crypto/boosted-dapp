@@ -18,7 +18,7 @@ export const Header = ({ changingRoute }) => {
       "url('/images/farm.jpg')"
     } 
     bgPos="center" bgRepeat="no-repeat"
-    bgSize="100% 100%"
+    bgSize="contain"
     height="60vh"
   >
     <Flex flex="1" alignItems="center">
