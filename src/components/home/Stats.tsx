@@ -7,6 +7,7 @@ import { useTreasuryBalance } from "src/hooks/useTreasuryBalance";
 import { useTotalValueLocked } from "src/hooks/useTotalValueLocked";
 import { useGetTotalRewardAmount } from "src/hooks/useGetTotalRewardAmount";
 import { useBoostPrice } from "src/hooks/useBoostPrice";
+import { useAlunaPrice } from "src/hooks/useAlunaPrice";
 import { Stack } from "@chakra-ui/core";
 import { getDisplayBalance } from "src/utils/formatBalance";
 
@@ -19,6 +20,7 @@ export const Stats: React.FC = () => {
   const treasuryBalance: string = getDisplayBalance(useTreasuryBalance());
   const totalValueLocked: string = useTotalValueLocked();
   const boostPrice: string = useBoostPrice();
+  const alunaPrice: string = useAlunaPrice();
 
   return (
     <Stack
@@ -41,6 +43,7 @@ export const Stats: React.FC = () => {
         value={totalValueLocked}
       />
       <StatBox title="B00ST PRICE" tokenTicker={"USD"} value={boostPrice} />
+      <StatBox title="ALUNA PRICE" tokenTicker={"USD"} value={alunaPrice} />
       <StatBox
         title="TOTAL SUPPLY"
         value={boostTotalSupply}
