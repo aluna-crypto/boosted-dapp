@@ -9,7 +9,10 @@ module.exports = {
 
   // tokens
 
+  // used for boosting
   BOOST_TOKEN: '0x0270d94f776F479306C6c44CF91aA24477C85772',
+  // usd for fetching price from coingecko
+  BOOST_TOKEN_PRODUCTION: '0x3e780920601d61cedb860fe9c4a90c9ea6a35e78',
   YCRV_TOKEN: '0xdf5e0e81dff6faf3a7e52ba697820c5e32d806a8',
 
   ALN_TOKEN: '0x2cC98Ccee440Fb3fcD508761e5B2C29E17D4C737',
