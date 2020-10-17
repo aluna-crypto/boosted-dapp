@@ -35,6 +35,7 @@ export const StakingPanel: React.FC<StakingPanelProps> = ({ pool }) => {
   const [showExitModal, setShowExitModal] = useState<boolean | null>(null);
 
   const allowance: BN = useAllowance(pool.tokenContract, pool.address);
+  console.log(pool.tokenContract);
   const tokenBalance: BN = useTokenBalance(pool.tokenContract);
   const stakedAmount: BN = useStakedAmount(pool.address);
 
@@ -275,7 +276,7 @@ export const StakingPanel: React.FC<StakingPanelProps> = ({ pool }) => {
           </Text>
           <Flex justifyContent="space-between">
             <Text>Rewards Claimable</Text>
-            <Text>{getDisplayBalance(rewardAmount)} BOOST</Text>
+            <Text>{getDisplayBalance(rewardAmount)} ALN</Text>
           </Flex>
           <Button
             width="100%"

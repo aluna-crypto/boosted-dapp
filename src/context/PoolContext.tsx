@@ -17,27 +17,19 @@ import {
 import { provider } from "web3-core";
 import {
   uniToken,
-  uniswapLPToken,
-  uniswapPool,
+  // uniswapLPToken,
+  // uniswapPool,
   uniBoostPool,
   uniswapBoostToken,
   boostToken,
   alunaPool,
-  alunaToken
+  alunaToken,
+  closedPool,
+  examplePool
 } from "src/constants/tokenAddresses";
 import { usePriceFeedContext } from "./PriceFeedContext";
 
 export const ALL_POOLS = [
-  {
-    name: "BOOST-ETH (Uniswap BOOST-ETH)",
-    code: "boost_pool",
-    order: 0,
-    icon: "/images/boost-icon.png",
-    address: uniswapPool,
-    tokenContract: uniswapLPToken,
-    tokenTicker: "boost-eth-lp",
-    open: false,
-  },
   {
     name: "Unicorn (UNI-BOOST)",
     code: "uni_boost_pool",
@@ -57,9 +49,35 @@ export const ALL_POOLS = [
     order: 0,
     icon: "/images/aluna_logo.png",
     address: alunaPool,
-    tokenContract: boostToken,
+    tokenContract: alunaToken,
     tokenTicker: "aln",
     open: true,
+    underlyingToken: alunaToken,
+    url:
+      "https://pools.balancer.exchange/#/pool/"+alunaToken,
+  },
+  {
+    name: "Example Pool",
+    code: "example_boost_pool",
+    order: 1,
+    icon: "/images/aluna_logo.png",
+    address: examplePool,
+    tokenContract: alunaToken,
+    tokenTicker: "aln",
+    open: true,
+    underlyingToken: alunaToken,
+    url:
+      "https://pools.balancer.exchange/#/pool/"+alunaToken,
+  },
+  {
+    name: "Simulation Closed Pool",
+    code: "sim_pool",
+    order: 0,
+    icon: "/images/aluna_logo.png",
+    address: closedPool,
+    tokenContract: boostToken,
+    tokenTicker: "aln",
+    open: false,
     underlyingToken: alunaToken,
     url:
       "https://pools.balancer.exchange/#/pool/"+alunaToken,

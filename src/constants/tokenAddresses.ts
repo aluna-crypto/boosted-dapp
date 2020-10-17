@@ -4,7 +4,7 @@ export const treasuryV2Contract = process.env.TREASURY_CONTRACT || '';
 
 //Boost token
 export const boostToken = process.env.BOOST_TOKEN || '';
-export const boostTokenMainnet = process.env.BOOST_TOKEN_PRODUCTION || '';
+export const boostTokenProduction = process.env.BOOST_TOKEN_PRODUCTION || '';
 
 // Treasury token holds yCRV
 export const yCRVToken = process.env.YCRV_TOKEN || '';
@@ -12,6 +12,10 @@ export const yCRVToken = process.env.YCRV_TOKEN || '';
 export const alunaPool  = process.env.ALN_POOL_1 || '';
 
 export const alunaToken  = process.env.ALN_TOKEN || '';
+
+// Simulation Addresses
+export const closedPool = "0x53BEE8EAFd22DadfF1De0A21806e54089884de98";
+export const examplePool = "0x4377828a4a83a610bfa25De28489ba2Ce5Bd41AC";
 
 // Pool Contract Addresses
 export const compPool = "0x39CD2Fc7BAc954ABc3C1b6dA1CD467fA44f4f3BD";

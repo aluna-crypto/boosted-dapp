@@ -1,6 +1,6 @@
 import React from "react";
 import { StatBox } from "./StatBox";
-import { boostToken } from "../../constants/tokenAddresses";
+import { alunaToken } from "../../constants/tokenAddresses";
 import { useTokenBalance } from "src/hooks/useTokenBalance";
 // import { useTotalSupply } from "src/hooks/useTotalSupply";
 import { useTreasuryBalance } from "src/hooks/useTreasuryBalance";
@@ -12,7 +12,7 @@ import { Stack } from "@chakra-ui/core";
 import { getDisplayBalance } from "src/utils/formatBalance";
 
 export const Stats: React.FC = () => {
-  const boostBalance: string = getDisplayBalance(useTokenBalance(boostToken));
+  const alunaBalance: string = getDisplayBalance(useTokenBalance(alunaToken));
   const totalRewardsAvailable: string = getDisplayBalance(
     useGetTotalRewardAmount()
   );
@@ -32,7 +32,7 @@ export const Stats: React.FC = () => {
       flexDirection={["row", "row", "column"]}
       overflow={["scroll"]}
     >
-      <StatBox title="BALANCE" value={boostBalance} tokenTicker={"ALN"} />
+      <StatBox title="BALANCE" value={alunaBalance} tokenTicker={"ALN"} />
       <StatBox
         title="READY FOR CLAIM"
         value={totalRewardsAvailable}
