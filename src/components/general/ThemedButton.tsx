@@ -5,7 +5,6 @@ export const ThemedButton: typeof Button = (props) => {
 	return ( 
 		<Button 
 			colorScheme="purple" 
-			variantColor="purple"
 			color= "white"
 			fontWeight="100"
 			fontSize="18px"

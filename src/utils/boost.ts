@@ -192,7 +192,7 @@ export const getPoolValueInUSD = async (
       const tokenContract = getPoolContract(provider, tokenAddress);
       const poolSize =
         (await tokenContract.methods.balanceOf(poolAddress).call()) / 1e18;
-      const priceInUSD = data[tokenAddress].usd;
+      const priceInUSD = data[tokenAddress.toLowerCase()].usd;
       const poolSizeNumber = new BN(poolSize).toNumber();
       return priceInUSD * poolSizeNumber;
     } catch (e) {
@@ -307,6 +307,7 @@ export const getBalancerPoolPriceInUSD = async (
         contract_addresses: [tokenTwo, boostToken],
         vs_currencies: "usd",
       });
+
       const poolContract = getPoolContract(provider, poolAddress);
       const boostTokenContract = getERC20Contract(provider, boostToken);
       const tokenTwoContract = getERC20Contract(provider, tokenTwo);
@@ -329,6 +330,7 @@ export const getBalancerPoolPriceInUSD = async (
         const balancerPrice =
           boostPerBalancer * boostPriceInUSD +
           tokenTwoPerBalancer * tokenTwoPriceInUSD;
+        console.log(tokenTwoPerBalancer, tokenTwoPriceInUSD)
         const poolSizeNumber = new BN(boostPoolSize).toNumber();
         return balancerPrice * poolSizeNumber;
       } else {

@@ -16,13 +16,13 @@ import {
 } from "src/utils/boost";
 import { provider } from "web3-core";
 import {
-  uniToken,
+  // uniToken,
   // uniswapLPToken,
   // uniswapPool,
-  uniBoostPool,
-  uniswapBoostToken,
+  // uniBoostPool,
+  // uniswapBoostToken,
   boostToken,
-  alunaPool,
+  // alunaPool,
   alunaToken,
   closedPool,
   examplePool
@@ -30,32 +30,6 @@ import {
 import { usePriceFeedContext } from "./PriceFeedContext";
 
 export const ALL_POOLS = [
-  {
-    name: "Unicorn (UNI-BOOST)",
-    code: "uni_boost_pool",
-    order: 1,
-    icon: "/images/uni-logo.png",
-    address: uniBoostPool,
-    tokenContract: uniswapBoostToken,
-    tokenTicker: "uni-boost-blp",
-    open: true,
-    underlyingToken: uniToken,
-    url:
-      "https://pools.balancer.exchange/#/pool/0x004e74ff81239c8f2ec0e2815defb970f3754d86",
-  },
-  {
-    name: "Aluna (ALN) Pool",
-    code: "aluna_boost_pool",
-    order: 0,
-    icon: "/images/aluna_logo.png",
-    address: alunaPool,
-    tokenContract: alunaToken,
-    tokenTicker: "aln",
-    open: true,
-    underlyingToken: alunaToken,
-    url:
-      "https://pools.balancer.exchange/#/pool/"+alunaToken,
-  },
   {
     name: "Example Pool",
     code: "example_boost_pool",

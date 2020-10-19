@@ -16,7 +16,6 @@ export const useBoostPrice = () => {
           contract_addresses: boostToken,
           vs_currencies: "usd",
         });
-
         const priceInUSD: number = data[boostToken.toLowerCase()].usd;
         setPrice(priceInUSD.toString());
       } catch (e) {
