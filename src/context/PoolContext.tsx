@@ -16,10 +16,8 @@ import {
 } from "src/utils/boost";
 import { provider } from "web3-core";
 import {
-  boostToken,
+  // boostToken,
   alunaToken,
-  closedPool,
-  examplePool,
   uniAlnEthPool,
   uniAlnBoostPool,
   balAlnEthPool,
