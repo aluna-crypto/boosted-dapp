@@ -16,6 +16,12 @@ export const alunaToken  = process.env.ALN_TOKEN || '';
 // Simulation Addresses
 export const closedPool = "0x53BEE8EAFd22DadfF1De0A21806e54089884de98";
 export const examplePool = "0x4377828a4a83a610bfa25De28489ba2Ce5Bd41AC";
+export const uniAlnEthPool = "0x2869Dc08FD978D60FcBe0BF3d859556751373620";
+export const uniAlnBoostPool = "0xFdb05dc3e5b3A8F3Fe92E21B175a9845fA3266C1";
+export const balAlnEthPool = "0x68B825172F0a3EB4931adD9A3DF40b5a2d18E698";
+export const uniAlnEthToken = "0xffb4893f44cdfcc1da93aa5a625b249c0b14452a";
+export const uniAlnBoostToken = "0x0bf121341276f717eb7b3dbc888e3f4e45a3dd0e";
+export const balAlnEthToken = "0x11d645e228bc87b2d208dcfe8a90b787de410d2d";
 
 // Pool Contract Addresses
 export const compPool = "0x39CD2Fc7BAc954ABc3C1b6dA1CD467fA44f4f3BD";

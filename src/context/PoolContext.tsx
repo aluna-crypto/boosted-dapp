@@ -16,45 +16,58 @@ import {
 } from "src/utils/boost";
 import { provider } from "web3-core";
 import {
-  // uniToken,
-  // uniswapLPToken,
-  // uniswapPool,
-  // uniBoostPool,
-  // uniswapBoostToken,
   boostToken,
-  // alunaPool,
   alunaToken,
   closedPool,
-  examplePool
+  examplePool,
+  uniAlnEthPool,
+  uniAlnBoostPool,
+  balAlnEthPool,
+  uniAlnEthToken,
+  uniAlnBoostToken,
+  balAlnEthToken
 } from "src/constants/tokenAddresses";
 import { usePriceFeedContext } from "./PriceFeedContext";
 
 export const ALL_POOLS = [
   {
-    name: "Example Pool",
-    code: "example_boost_pool",
+    name: "Uniswap ALN-ETH",
+    code: "uni_aln_eth",
     order: 1,
     icon: "/images/aluna_logo.png",
-    address: examplePool,
-    tokenContract: alunaToken,
-    tokenTicker: "aln",
+    address: uniAlnEthPool,
+    tokenContract: uniAlnEthToken,
+    tokenTicker: "uni-aln-eth",
     open: true,
     underlyingToken: alunaToken,
     url:
-      "https://pools.balancer.exchange/#/pool/"+alunaToken,
+      "https://app.uniswap.org/#/add/0x2cC98Ccee440Fb3fcD508761e5B2C29E17D4C737/ETH",
   },
   {
-    name: "Simulation Closed Pool",
-    code: "sim_pool",
-    order: 0,
+    name: "Uniswap ALN-BOOST",
+    code: "uni_aln_boost",
+    order: 1,
     icon: "/images/aluna_logo.png",
-    address: closedPool,
-    tokenContract: boostToken,
-    tokenTicker: "aln",
-    open: false,
+    address: uniAlnBoostPool,
+    tokenContract: uniAlnBoostToken,
+    tokenTicker: "uni-aln-boost",
+    open: true,
     underlyingToken: alunaToken,
     url:
-      "https://pools.balancer.exchange/#/pool/"+alunaToken,
+      "https://app.uniswap.org/#/add/0x2cC98Ccee440Fb3fcD508761e5B2C29E17D4C737/0x0270d94f776F479306C6c44CF91aA24477C85772",
+  },
+  {
+    name: "Balancer ALN-ETH",
+    code: "bln_aln_eth",
+    order: 1,
+    icon: "/images/aluna_logo.png",
+    address: balAlnEthPool,
+    tokenContract: balAlnEthToken,
+    tokenTicker: "bln-aln-eth",
+    open: true,
+    underlyingToken: alunaToken,
+    url:
+      "https://kovan.pools.balancer.exchange/#/pool/0x11d645e228bc87b2d208dcfe8a90b787de410d2d/",
   },
 ];
 
