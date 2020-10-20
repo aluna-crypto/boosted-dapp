@@ -22,17 +22,17 @@ const customTheme = {
   icons: {
     logo: {
       // path: (<path d="..."/>) => string
-    }
-  }
+    },
+  },
 };
 
-customTheme.colors.purple['200'] = '#7547dc'
-customTheme.colors.gray['800'] = customTheme.colors.black;
-customTheme.colors.yellow['500'] = '#f5be23';
-customTheme.colors.green['200'] = '#1fc16d';
-customTheme.colors.red['200'] = '#f34a34';
+customTheme.colors.purple["200"] = "#7547dc";
+customTheme.colors.gray["800"] = customTheme.colors.black;
+customTheme.colors.yellow["500"] = "#f5be23";
+customTheme.colors.green["200"] = "#1fc16d";
+customTheme.colors.red["200"] = "#f34a34";
 
 // uncomment to see everything from the theme
-console.log("customTheme ->", customTheme)
+// console.log("customTheme ->", customTheme)
 
 export default customTheme;
