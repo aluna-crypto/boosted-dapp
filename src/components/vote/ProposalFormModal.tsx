@@ -40,7 +40,7 @@ export const ProposalFormModal: React.FC<ModalProps> = () => {
         <Stack pb={8}>
           {parseFloat(stakedBalance.toString()) < 13.37 ? (
             <Text textAlign="center" fontWeight="bold">
-              You must stake at least 13.37 BOOST to submit a proposal.
+              You must stake at least 13.37 ALN to submit a proposal.
             </Text>
           ) : (
             <>

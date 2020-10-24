@@ -15,7 +15,7 @@ import {
 } from "@chakra-ui/core";
 import { Formik, Field } from "formik";
 import { useTokenBalance } from "src/hooks/useTokenBalance";
-import { boostToken, governanceContract } from "src/constants/tokenAddresses";
+import { alunaToken, governanceContract } from "src/constants/tokenAddresses";
 import { useApprove } from "src/hooks/useApprove";
 import { useAllowance } from "src/hooks/useAllowance";
 import { useGovernanceStake } from "src/hooks/useGovernanceStake";
@@ -23,12 +23,12 @@ import { useGovernanceStakedBalance } from "src/hooks/useGovernanceStakedBalance
 import { getDisplayBalance } from "src/utils/formatBalance";
 
 export const StakeModal: React.FC = () => {
-  const boostBalance = useTokenBalance(boostToken);
-  const { onApprove } = useApprove(boostToken, governanceContract);
+  const boostBalance = useTokenBalance(alunaToken);
+  const { onApprove } = useApprove(alunaToken, governanceContract);
   const [requestedApproval, setRequestedApproval] = useState<boolean>(false);
   const { onStake } = useGovernanceStake();
   const stakedBalance = useGovernanceStakedBalance();
-  const allowance = useAllowance(boostToken, governanceContract);
+  const allowance = useAllowance(alunaToken, governanceContract);
 
   const validateStakeAmount = (value: string) => {
     let error;
@@ -72,12 +72,12 @@ export const StakeModal: React.FC = () => {
         <Stack pb={8} spacing={4}>
           {parseFloat(boostBalance.toString()) === 0 ? (
             <Text textAlign="center" fontWeight="bold">
-              Insufficient BOOST Balance to stake
+              Insufficient ALN Balance to stake
             </Text>
           ) : (
             <>
               <Text fontSize="sm">
-                You have staked: {getDisplayBalance(stakedBalance)} BOOST
+                You have staked: {getDisplayBalance(stakedBalance)} ALN
               </Text>
               <Formik
                 initialValues={{

@@ -98,7 +98,7 @@ export const UnstakeModal: React.FC = () => {
         <Stack pb={8} spacing={4}>
           {parseFloat(stakedBalance.toString()) === 0 ? (
             <Text textAlign="center" fontWeight="bold">
-              You have not staked any BOOST yet.
+              You have not staked any ALN yet.
             </Text>
           ) : (
             <>
