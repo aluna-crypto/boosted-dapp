@@ -60,6 +60,7 @@ export const ProposalFormModal: React.FC<ModalProps> = () => {
                   url: "",
                   withdrawAmount: "",
                   withdrawAddress: "",
+                  withdrawTitle: "",
                 }}
                 onSubmit={(values, actions) => {
                   actions.setSubmitting(true);
@@ -70,6 +71,10 @@ export const ProposalFormModal: React.FC<ModalProps> = () => {
                   return (
                     <form onSubmit={handleSubmit}>
                       <Stack spacing={4}>
+                        <FormInput
+                          fieldName={"Withdraw Title"}
+                          name={"withdrawTitle"}
+                        />
                         <FormInput fieldName={"Proposal URL"} name={"url"} />
                         <FormInput
                           fieldName={"Withdraw Amount"}

@@ -42,6 +42,8 @@ export const getSingleProposal = async (provider: provider, id: number) => {
   try {
     const contract = getContract(provider, governanceContract);
     const proposal = await contract.methods.proposals(id).call();
+    const quorum = await contract.methods.getQuorum(id).call();
+    proposal.quorum = quorum;
     return proposal;
   } catch (e) {
     return null;
@@ -73,6 +75,7 @@ export const submitProposal = async (
       const tx = await contract.methods
         .propose(
           values.url.toString(),
+          values.withdrawTitle.toString(),
           bntokens,
           values.withdrawAddress.toString()
         )

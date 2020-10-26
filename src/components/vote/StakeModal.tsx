@@ -129,7 +129,7 @@ export const StakeModal: React.FC = () => {
                               disabled={requestedApproval}
                               onClick={() => handleApprove()}
                             >
-                              Approve BOOST
+                              Approve ALN
                             </Button>
                           ) : (
                             <Button

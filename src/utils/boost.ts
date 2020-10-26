@@ -330,7 +330,6 @@ export const getBalancerPoolPriceInUSD = async (
         const balancerPrice =
           boostPerBalancer * boostPriceInUSD +
           tokenTwoPerBalancer * tokenTwoPriceInUSD;
-        console.log(tokenTwoPerBalancer, tokenTwoPriceInUSD)
         const poolSizeNumber = new BN(boostPoolSize).toNumber();
         return balancerPrice * poolSizeNumber;
       } else {
@@ -359,7 +358,6 @@ export const stake = async (
     .stake(bntokens)
     .send({ from: account })
     .on("transactionHash", (tx) => {
-      console.log(tx);
       return tx.transactionHash;
     });
 };
@@ -379,7 +377,6 @@ export const unstake = async (
       .withdraw(bntokens)
       .send({ from: account })
       .on("transactionHash", (tx) => {
-        console.log(tx);
         return tx.transactionHash;
       });
   } catch (e) {

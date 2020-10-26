@@ -10,7 +10,7 @@ import {
 import { useVoteAgainst } from "src/hooks/useVoteAgainst";
 import { useVoteFor } from "src/hooks/useVoteFor";
 import { useGovernanceStakedBalance } from "src/hooks/useGovernanceStakedBalance";
-import { useGetTotalGovernanceStaked } from "src/hooks/useGetTotalGovernanceStaked";
+// import { useGetTotalGovernanceStaked } from "src/hooks/useGetTotalGovernanceStaked";
 
 const Proposal: React.FC = () => {
   const router = useRouter();
@@ -21,7 +21,7 @@ const Proposal: React.FC = () => {
   const [requestedFor, setRequestedFor] = useState<boolean>(false);
   const [requestedAgainst, setRequestedAgainst] = useState<boolean>(false);
   const stakedBalance = useGovernanceStakedBalance();
-  const totalStaked: BN = useGetTotalGovernanceStaked();
+  // const totalStaked: BN = useGetTotalGovernanceStaked();
 
   const handleVoteFor = async () => {
     try {
@@ -67,10 +67,11 @@ const Proposal: React.FC = () => {
     const totalForVotes = new BN(proposal.totalForVotes);
     const totalAgainstVotes = new BN(proposal.totalAgainstVotes);
     const totalVotes = totalForVotes.plus(totalAgainstVotes);
+    const quorum = new BN(proposal.quorum);
     return (
-      <Stack colorScheme="white" spacing={4} width="100%" mt={8}>
+      <Stack colorScheme="white" spacing={4} width="100%" mt={8} pb={200}>
         <Stack boxShadow="md" p={6} borderWidth="1px">
-          <Heading>BFIP-{parseInt(pid?.toString()) + 2}</Heading>
+          <Heading>AFIP-{parseInt(pid?.toString()) + 2}</Heading>
           <Text as="a" href={getProposalUrl} target="_blank">
             {proposal.url}
           </Text>
@@ -106,7 +107,7 @@ const Proposal: React.FC = () => {
         </Stack>
         <Stack boxShadow="md" p={6} borderWidth="1px">
           <Text pt={4}>
-            You must stake ALN to vote, voting will lock your staked BOOST for 72 hours after your latest vote.
+            You must stake ALN to vote, voting will lock your staked ALN for 72 hours after your latest vote.
           </Text>
           <Flex w="100%" py={4}>
             <Stack w="50%" spacing={2}>
@@ -150,7 +151,7 @@ const Proposal: React.FC = () => {
               <Text mr={4} fontWeight="bold">
                 For
               </Text>
-              <Text sub={true}>{getDisplayBalance(totalForVotes)} BOOST</Text>
+              <Text sub={true}>{getDisplayBalance(totalForVotes)} ALN</Text>
             </Flex>
             <Text>
               {(totalForVotes.div(totalVotes).toNumber() * 100).toFixed(2)}%
@@ -167,7 +168,7 @@ const Proposal: React.FC = () => {
                 Against
               </Text>
               <Text sub={true}>
-                {getDisplayBalance(totalAgainstVotes)} BOOST
+                {getDisplayBalance(totalAgainstVotes)} ALN
               </Text>
             </Flex>
             <Text>
@@ -185,17 +186,16 @@ const Proposal: React.FC = () => {
                 Quorum (minimum 30%)
               </Text>
               <Text sub={true}>
-                {getDisplayBalance(totalVotes)} Votes/{" "}
-                {getDisplayBalance(totalStaked)} Total Staked
+                {quorum.div(100).toNumber().toFixed(2)}% Total Staked
               </Text>
             </Flex>
             <Text>
-              {(totalVotes.div(totalStaked).toNumber() * 100).toFixed(2)}%
+              {quorum.div(100).toNumber().toFixed(2)}%
             </Text>
           </Flex>
           <Progress
             hasStripe
-            value={totalVotes.div(totalStaked).toNumber() * 100}
+            value={quorum.div(100).toNumber()}
             colorScheme="yellow"
           />
         </Stack>
