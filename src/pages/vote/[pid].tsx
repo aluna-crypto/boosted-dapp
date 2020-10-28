@@ -67,6 +67,7 @@ const Proposal: React.FC = () => {
     const totalForVotes = new BN(proposal.totalForVotes);
     const totalAgainstVotes = new BN(proposal.totalAgainstVotes);
     const totalVotes = totalForVotes.plus(totalAgainstVotes);
+    console.log(proposal)
     const quorum = new BN(proposal.quorum);
     return (
       <Stack colorScheme="white" spacing={4} width="100%" mt={8} pb={200}>
