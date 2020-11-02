@@ -103,7 +103,7 @@ export const UnstakeModal: React.FC = () => {
           ) : (
             <>
               <Text fontSize="sm">
-                You have staked: {getDisplayBalance(stakedBalance)} BOOST
+                You have staked: {getDisplayBalance(stakedBalance)} ALN
               </Text>
               <Formik
                 initialValues={{

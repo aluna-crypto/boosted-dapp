@@ -29,6 +29,45 @@ import { usePriceFeedContext } from "./PriceFeedContext";
 
 export const ALL_POOLS = [
   {
+    name: "UNI-ALN-LP",
+    code: "uni-aln-lp",
+    order: 1,
+    icon: "/images/aluna_logo.png",
+    address: "0x23d868f18fC4bBB4Da3797A360d421AA811edF67",
+    tokenContract: "0xffb4893f44cdfcc1da93aa5a625b249c0b14452a",
+    tokenTicker: "uni-aln-lp",
+    open: true,
+    underlyingToken: alunaToken,
+    url:
+      "https://app.uniswap.org/#/add/0x2cC98Ccee440Fb3fcD508761e5B2C29E17D4C737/ETH",
+  },
+  {
+    name: "UNI-ALN-BOOST",
+    code: "uni-aln-boost",
+    order: 2,
+    icon: "/images/aluna_logo.png",
+    address: "0x883323df606b29cb1C7e67cdcdE35CD66711791F",
+    tokenContract: "0x0bf121341276f717eb7b3dbc888e3f4e45a3dd0e",
+    tokenTicker: "uni-aln-boost",
+    open: true,
+    underlyingToken: alunaToken,
+    url:
+      "https://app.uniswap.org/#/add/0x2cC98Ccee440Fb3fcD508761e5B2C29E17D4C737/ETH",
+  },
+  {
+    name: "BAL-ALN-WETH",
+    code: "bal-aln-weth",
+    order: 3,
+    icon: "/images/aluna_logo.png",
+    address: "0x2e5d676AF48FF6cc1F6b6DbFa0C0fb238AbF8803",
+    tokenContract: "0x11d645e228bc87b2d208dcfe8a90b787de410d2d",
+    tokenTicker: "bal-aln-weth",
+    open: true,
+    underlyingToken: alunaToken,
+    url:
+      "https://kovan.pools.balancer.exchange/#/pool/0x11d645e228bc87b2d208dcfe8a90b787de410d2d/",
+  },
+  {
     name: "Uniswap ALN-ETH",
     code: "uni_aln_eth",
     order: 1,
@@ -36,7 +75,7 @@ export const ALL_POOLS = [
     address: uniAlnEthPool,
     tokenContract: uniAlnEthToken,
     tokenTicker: "uni-aln-eth",
-    open: true,
+    open: false,
     underlyingToken: alunaToken,
     url:
       "https://app.uniswap.org/#/add/0x2cC98Ccee440Fb3fcD508761e5B2C29E17D4C737/ETH",
@@ -44,12 +83,12 @@ export const ALL_POOLS = [
   {
     name: "Uniswap ALN-BOOST",
     code: "uni_aln_boost",
-    order: 1,
+    order: 2,
     icon: "/images/aluna_logo.png",
     address: uniAlnBoostPool,
     tokenContract: uniAlnBoostToken,
     tokenTicker: "uni-aln-boost",
-    open: true,
+    open: false,
     underlyingToken: alunaToken,
     url:
       "https://app.uniswap.org/#/add/0x2cC98Ccee440Fb3fcD508761e5B2C29E17D4C737/0x0270d94f776F479306C6c44CF91aA24477C85772",
@@ -57,12 +96,12 @@ export const ALL_POOLS = [
   {
     name: "Balancer ALN-ETH",
     code: "bln_aln_eth",
-    order: 1,
+    order: 3,
     icon: "/images/aluna_logo.png",
     address: balAlnEthPool,
     tokenContract: balAlnEthToken,
     tokenTicker: "bln-aln-eth",
-    open: true,
+    open: false,
     underlyingToken: alunaToken,
     url:
       "https://kovan.pools.balancer.exchange/#/pool/0x11d645e228bc87b2d208dcfe8a90b787de410d2d/",

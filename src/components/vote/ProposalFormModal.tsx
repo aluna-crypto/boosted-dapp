@@ -38,14 +38,14 @@ export const ProposalFormModal: React.FC<ModalProps> = () => {
       <ModalCloseButton />
       <ModalBody>
         <Stack pb={8}>
-          {parseFloat(stakedBalance.toString()) < 13.37 ? (
+          {parseFloat(stakedBalance.toString()) < 1337 ? (
             <Text textAlign="center" fontWeight="bold">
               You must stake at least 1337 ALN to submit a proposal.
             </Text>
           ) : (
             <>
               <Text fontSize="sm">
-                View AFIP template{" "}
+                View ASIP template{" "}
                 <Text
                   as="a"
                   href="https://github.com/alunacrypto/ASIPs"

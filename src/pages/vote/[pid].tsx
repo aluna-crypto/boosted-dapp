@@ -72,7 +72,7 @@ const Proposal: React.FC = () => {
     return (
       <Stack colorScheme="white" spacing={4} width="100%" mt={8} pb={200}>
         <Stack boxShadow="md" p={6} borderWidth="1px">
-          <Heading>AFIP-{parseInt(pid?.toString()) + 2}</Heading>
+          <Heading>ASIP-{parseInt(pid?.toString()) + 2}</Heading>
           <Text as="a" href={getProposalUrl} target="_blank">
             {proposal.url}
           </Text>

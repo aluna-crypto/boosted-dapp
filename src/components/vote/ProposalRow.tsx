@@ -24,7 +24,7 @@ export const ProposalRow: React.FC<ProposalRowProps> = ({ proposal, pid }) => {
     <Link href="/vote/[pid]" as={`/vote/${pid}`}>
       <Flex borderBottomWidth={1} py={4} cursor="pointer" overflow="scroll">
         <VStack mx={4} px={4} whiteSpace="nowrap">
-          <Text textAlign="center" fontWeight="bold">{`AFIP-${pid + 2}`}</Text>
+          <Text textAlign="center" fontWeight="bold">{`ASIP-${pid + 2}`}</Text>
         </VStack>
         <VStack mx={4}>
           {new Date(proposal.end * 1000) < new Date() ? (
