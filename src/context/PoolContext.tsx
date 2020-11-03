@@ -52,7 +52,7 @@ export const ALL_POOLS = [
     open: true,
     underlyingToken: alunaToken,
     url:
-      "https://app.uniswap.org/#/add/0x2cC98Ccee440Fb3fcD508761e5B2C29E17D4C737/ETH",
+      "https://app.uniswap.org/#/add/0x2cC98Ccee440Fb3fcD508761e5B2C29E17D4C737/0x0270d94f776f479306c6c44cf91aa24477c85772",
   },
   {
     name: "BAL-ALN-WETH",
