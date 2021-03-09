@@ -50,11 +50,11 @@ export const Header = ({ changingRoute }) => {
       >
         ABOUT 
       </Link>
-      <NextLink href="/vote">
+      {/* <NextLink href="/vote">
         <Link fontSize={["sm", "lg"]} m="4" fontWeight="300">
           VOTE
         </Link>
-      </NextLink>
+      </NextLink> */}
     </Flex>
     <Flex flex="1" display="flex" justifyContent="flex-end">
       
