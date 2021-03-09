@@ -19,7 +19,7 @@ import { PriceFeedProvider } from "src/context/PriceFeedContext";
 import { useWeb3Presence } from "src/hooks/useWeb3Presence";
 import Router from "next/router";
 
-console.log("env: ", process.env.ENV)
+console.log("env: ", process.env.ENV);
 
 function MyApp({ Component, pageProps }) {
   const [changingRoute, setChangingRoute] = useState<boolean>(false);
@@ -54,7 +54,6 @@ function MyApp({ Component, pageProps }) {
         >
           <PoolProvider>
             <ModalContext>
-
               <Box>
                 {!web3Present ? (
                   <Flex
@@ -66,7 +65,7 @@ function MyApp({ Component, pageProps }) {
                   >
                     <Image
                       py={4}
-                      src="/images/boost-icon.png"
+                      src="/images/aluna-icon.png"
                       w="32"
                       align="center"
                     />
@@ -76,16 +75,15 @@ function MyApp({ Component, pageProps }) {
                     </Heading>
                     <Text py={2} px={2} textAlign="center" fontSize="md">
                       Please switch to a web3 compatible browser to use
-                      Boosted.Finance
+                      aluna.social/farm
                     </Text>
                   </Flex>
                 ) : (
                   <Container>
-
                     <Header changingRoute={changingRoute} />
-                  
+
                     <Component {...pageProps} />
-                    
+
                     <CTA />
                   </Container>
                 )}
