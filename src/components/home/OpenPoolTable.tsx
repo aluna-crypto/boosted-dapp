@@ -3,7 +3,7 @@ import {
   Text,
   Image,
   Flex,
-  useColorMode,
+  // useColorMode,
   BoxProps,
   Box,
   Link as URL,
@@ -97,7 +97,7 @@ function TableCell(props: BoxProps) {
 export const OpenPoolTable: React.FC = () => {
   const { account } = useWallet();
   const { openPools } = usePoolContext();
-  const { colorMode } = useColorMode();
+  // const { colorMode } = useColorMode();
   return (
     <Table boxShadow="md" p={5} borderWidth="1px" mt="4">
       <TableHead>
