@@ -118,17 +118,17 @@ export const OpenPoolTable: React.FC = () => {
                   w="30px"
                   h="30px"
                   borderRadius="15px"
-                  background={colorMode === "dark" ? "white" : "transparent"}
-                  borderWidth={colorMode !== "dark" ? "1px" : 0}
-                  borderColor={
-                    colorMode !== "dark" ? "grey.100" : "transparent"
-                  }
+                  // background={colorMode === "dark" ? "white" : "transparent"}
+                  // borderWidth={colorMode !== "dark" ? "1px" : 0}
+                  // borderColor={
+                  //   colorMode !== "dark" ? "grey.100" : "transparent"
+                  // }
                   alignItems="center"
                   justifyContent="center"
                   mr="2"
-                  mb="2"
+                  mb="0"
                 >
-                  <Image src={e.icon} width="5" height="5" />
+                  <Image src={e.icon} width="6" height="6" />
                 </Flex>
                 <URL
                   fontWeight="bold"

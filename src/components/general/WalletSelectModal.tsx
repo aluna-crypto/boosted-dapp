@@ -48,7 +48,7 @@ export const WalletSelectModal: React.FC<WalletSelectModalProps> = ({
       toast({
         title: "Check your network.",
         description:
-          "BOOSTING is only available on main-net, please check your network.",
+          "Aluna Farm is only available on main-net, please check your network.",
         status: "success",
         duration: 9000,
         isClosable: true,
