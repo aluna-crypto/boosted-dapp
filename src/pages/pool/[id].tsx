@@ -24,7 +24,15 @@ const Pool: React.FC = () => {
 
   if (id && openPools && currentPool.length > 0) {
     return (
-      <Stack fontFamily="mono" mt={4} mb={200} width="100%" p={4} borderWidth={1} borderRadius={5}>
+      <Stack
+        fontFamily="mono"
+        mt={4}
+        mb={200}
+        width="100%"
+        p={4}
+        borderWidth={1}
+        borderRadius={5}
+      >
         <Flex alignItems="center">
           <Image src={currentPool[0].icon} width="10" height="10" />
           <Heading fontSize="lg" p={4}>
@@ -32,10 +40,10 @@ const Pool: React.FC = () => {
           </Heading>
         </Flex>
         <Tabs>
-          <TabList>
+          {/* <TabList>
             <Tab _selected={{ color: "yellow.500", borderColor: "yellow.500"}}>Staking</Tab>
             <Tab _selected={{ color: "yellow.500", borderColor: "yellow.500"}}>Boosting</Tab>
-          </TabList>
+          </TabList> */}
           <TabPanels>
             <TabPanel>
               <StakingPanel pool={currentPool[0]} />

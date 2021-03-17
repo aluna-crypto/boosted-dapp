@@ -15,7 +15,7 @@ import { useWallet } from "use-wallet";
 import formatCurrency from "format-currency";
 import BN from "bignumber.js";
 import Link from "next/link";
-import { ThemedButton } from '../general/ThemedButton';
+import { ThemedButton } from "../general/ThemedButton";
 
 /**
  * Represents tabular data - that is, information presented in a
@@ -104,7 +104,7 @@ export const OpenPoolTable: React.FC = () => {
         <TableRow>
           <TableHeader>POOL</TableHeader>
           <TableHeader>POOL SIZE</TableHeader>
-          <TableHeader>BOOSTER COST</TableHeader>
+          {/* <TableHeader>BOOSTER COST</TableHeader> */}
           <TableHeader>EST. APY</TableHeader>
           <TableHeader />
         </TableRow>
@@ -158,23 +158,19 @@ export const OpenPoolTable: React.FC = () => {
                 ${e.poolPriceInUSD ? formatCurrency(e.poolPriceInUSD) : 0}
               </Text>
             </TableCell>
-            <TableCell>
+            {/* <TableCell>
               <Text fontSize="sm">
                 {e.boosterPrice ? getDisplayBalance(e.boosterPrice) : 0} BOOST
               </Text>
-            </TableCell>
+            </TableCell> */}
             <TableCell>
               <Text fontSize="sm">{`${e.apy ? e.apy : 0}%`}</Text>
             </TableCell>
             <TableCell textAlign="right">
               {!!account && (
                 <Link href="/pool/[id]" as={`/pool/${e.code}`}>
-                  <ThemedButton
-                    size="sm"
-                    fontSize="sm"
-                    fontWeight="medium"
-                  >
-                    Stake/Boost
+                  <ThemedButton size="sm" fontSize="sm" fontWeight="medium">
+                    Stake
                   </ThemedButton>
                 </Link>
               )}
