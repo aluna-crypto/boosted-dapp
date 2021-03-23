@@ -119,6 +119,7 @@ export interface IPool {
   tokenContract: string;
   poolSize: BN | null;
   poolPriceInUSD: number | null;
+  periodStart?: BN | null;
   periodFinish: BN | null;
   boosterPrice: BN | null;
   tokenTicker: string;
@@ -207,6 +208,9 @@ export const PoolProvider: React.FC = ({ children }) => {
         tokenTicker: pool.tokenTicker,
         poolSize: poolStats?.poolSize ? new BN(poolStats?.poolSize) : null,
         poolPriceInUSD: poolPriceInUSD ? poolPriceInUSD : null,
+        periodStart: poolStats?.periodStart
+          ? new BN(poolStats.periodStart)
+          : null,
         periodFinish: poolStats?.periodFinish
           ? new BN(poolStats.periodFinish)
           : null,

@@ -141,6 +141,13 @@ export const OpenPoolTable: React.FC = () => {
                 </URL>
               </Flex>
               <Text sub={"true"} fontSize="xs">
+                {`Pool starts: ${
+                  e.periodStart
+                    ? formatTimestamp(new BN(e.periodStart).toNumber())
+                    : 0
+                }`}
+              </Text>
+              <Text sub={"true"} fontSize="xs">
                 {`Pool ends: ${
                   e.periodFinish
                     ? formatTimestamp(new BN(e.periodFinish).toNumber())
@@ -164,7 +171,9 @@ export const OpenPoolTable: React.FC = () => {
               </Text>
             </TableCell> */}
             <TableCell>
-              <Text fontSize="sm">{`${e.apy ? e.apy : 0}%`}</Text>
+              <Text fontSize="sm">{`${
+                e.apy ? (e.apy == Infinity ? "Unknown" : e.apy + "%") : 0
+              }`}</Text>
             </TableCell>
             <TableCell textAlign="right">
               {!!account && (

@@ -136,6 +136,7 @@ export const getTreasuryV2Balance = async (
 
 interface PoolStats {
   periodFinish: string;
+  periodStart: string;
   poolSize: string;
   boosterPrice: string;
 }
@@ -149,6 +150,7 @@ export const getPoolStats = async (
   if (provider && account) {
     try {
       let poolContract;
+      let periodStart;
       let periodFinish;
       let poolSize;
       let boosterPrice;
@@ -157,6 +159,7 @@ export const getPoolStats = async (
         poolSize = await poolContract.methods.totalSupply().call();
       } else {
         poolContract = getPoolV2Contract(provider, poolAddress);
+        periodStart = await poolContract.methods.starttime().call();
         periodFinish = await poolContract.methods.periodFinish().call();
         poolSize = await poolContract.methods.totalSupply().call();
         const boosterInfo = await poolContract.methods
@@ -165,6 +168,7 @@ export const getPoolStats = async (
         boosterPrice = boosterInfo["boosterPrice"];
       }
       return {
+        periodStart,
         periodFinish,
         poolSize,
         boosterPrice,
@@ -651,7 +655,7 @@ export const getBalancerAPY = async (
   if (provider && coinGecko && tokenTwo) {
     try {
       const poolContract = getPoolV2Contract(provider, poolAddress);
-      const boostContract = getERC20Contract(provider, boostToken);
+      const boostContract = getERC20Contract(provider, alunaToken);
       const tokenTwoContract = getERC20Contract(provider, tokenTwo);
       const balancerTokenContract = getERC20Contract(provider, lpTokenContract);
 
@@ -673,11 +677,11 @@ export const getBalancerAPY = async (
       const totalTwoPerBalancer = totalTokenTwoAmount / totalBalancerAmount;
 
       const { data } = await coinGecko.simple.fetchTokenPrice({
-        contract_addresses: [tokenTwo, boostToken],
+        contract_addresses: [tokenTwo, alunaToken],
         vs_currencies: "usd",
       });
       if (data) {
-        const boostPriceInUSD = data[boostToken.toLowerCase()].usd;
+        const boostPriceInUSD = data[alunaToken.toLowerCase()].usd;
         const tokenTwoPriceInUSD = data[tokenTwo.toLowerCase()].usd;
 
         const balancerPrice =
