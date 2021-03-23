@@ -39,7 +39,7 @@ export const ALL_POOLS = [
     open: true,
     underlyingToken: alunaToken,
     url:
-      "https://app.uniswap.org/#/add/0x005882F1334f76e798fFBE7ec3a220e1Fd0175fd/ETH",
+      "https://app.uniswap.org/#/add/0x8185bc4757572da2a610f887561c32298f1a5748/ETH",
   },
   // {
   //   name: "UNI-ALN-BOOST",
