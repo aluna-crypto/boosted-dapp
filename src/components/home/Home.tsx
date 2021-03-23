@@ -32,8 +32,10 @@ export const Home: React.FC = () => {
       <Box flex={4}>
         <Tabs>
           <TabList>
-            <Tab _selected={{ color: "yellow.500", borderColor: "yellow.500"}} >Open</Tab>
-            <Tab _selected={{ color: "yellow.500", borderColor: "yellow.500"}} >Closed</Tab>
+            <Tab _selected={{ color: "yellow.500", borderColor: "yellow.500" }}>
+              Open
+            </Tab>
+            {/* <Tab _selected={{ color: "yellow.500", borderColor: "yellow.500"}} >Closed</Tab> */}
           </TabList>
           <TabPanels>
             <TabPanel p={0}>

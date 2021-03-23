@@ -92,7 +92,7 @@ function MyApp({ Component, pageProps }) {
           </PoolProvider>
         </UseWalletProvider>
       </PriceFeedProvider>
-      <title>Aluna Boosted Finance</title>
+      <title>Aluna Social Farm</title>
       <style jsx global>{`
         @font-face {
           font-family: "Formular-Mono";

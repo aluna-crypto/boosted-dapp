@@ -17,7 +17,8 @@ import {
 import { provider } from "web3-core";
 import {
   // boostToken,
-  alunaToken,
+  // alunaToken,
+  wETHToken,
   // uniAlnEthPool,
   // uniAlnBoostPool,
   // balAlnEthPool,
@@ -37,7 +38,8 @@ export const ALL_POOLS = [
     tokenContract: "0xdc3f6f4c00b55f56d5ef6293b762c6483af24a82",
     tokenTicker: "aln-eth-lp",
     open: true,
-    underlyingToken: alunaToken,
+    // Since the pool is ALN-ETH the underlying token should be WETH
+    underlyingToken: wETHToken,
     url:
       "https://app.uniswap.org/#/add/0x8185bc4757572da2a610f887561c32298f1a5748/ETH",
   },

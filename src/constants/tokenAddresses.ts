@@ -13,6 +13,8 @@ export const alunaPool  = process.env.ALN_POOL_1 || '';
 
 export const alunaToken  = process.env.ALN_TOKEN || '';
 
+export const wETHToken = process.env.WETH_TOKEN || ''
+
 // Simulation Addresses
 export const closedPool = "0x53BEE8EAFd22DadfF1De0A21806e54089884de98";
 export const examplePool = "0x4377828a4a83a610bfa25De28489ba2Ce5Bd41AC";

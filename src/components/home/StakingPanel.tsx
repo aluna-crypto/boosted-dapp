@@ -35,7 +35,6 @@ export const StakingPanel: React.FC<StakingPanelProps> = ({ pool }) => {
   const [showExitModal, setShowExitModal] = useState<boolean | null>(null);
 
   const allowance: BN = useAllowance(pool.tokenContract, pool.address);
-  console.log(pool.tokenContract);
   const tokenBalance: BN = useTokenBalance(pool.tokenContract);
   const stakedAmount: BN = useStakedAmount(pool.address);
 
@@ -119,14 +118,12 @@ export const StakingPanel: React.FC<StakingPanelProps> = ({ pool }) => {
           unstakeAmount={unstakeAmount}
         />
       )}
-      <Stack >
+      <Stack>
         <Text fontSize="md" py={8} as="u">
           STAKING
         </Text>
         <Flex justifyContent="space-between">
-          <Text>
-            {pool.tokenTicker.toUpperCase()} Balance
-          </Text>
+          <Text>{pool.tokenTicker.toUpperCase()} Balance</Text>
           <Text>
             {getDisplayBalance(tokenBalance)} {pool.tokenTicker.toUpperCase()}
           </Text>
@@ -271,7 +268,7 @@ export const StakingPanel: React.FC<StakingPanelProps> = ({ pool }) => {
         )}
         <Divider py={4} />
         <Stack spacing={4}>
-          <Text fontSize="md"py={8} as="u">
+          <Text fontSize="md" py={8} as="u">
             CLAIM REWARDS
           </Text>
           <Flex justifyContent="space-between">

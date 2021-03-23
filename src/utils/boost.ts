@@ -6,6 +6,7 @@ import POOLABI from "../constants/abi/BoostPools.json";
 import POOLV2ABI from "../constants/abi/BoostPoolV2.json";
 import {
   boostToken,
+  alunaToken,
   uniswapPool,
   wethToken,
   uniswapLPToken,
@@ -304,12 +305,12 @@ export const getBalancerPoolPriceInUSD = async (
   if (provider && coinGecko && tokenTwo) {
     try {
       const { data } = await coinGecko.simple.fetchTokenPrice({
-        contract_addresses: [tokenTwo, boostToken],
+        contract_addresses: [tokenTwo, alunaToken],
         vs_currencies: "usd",
       });
 
       const poolContract = getPoolContract(provider, poolAddress);
-      const boostTokenContract = getERC20Contract(provider, boostToken);
+      const boostTokenContract = getERC20Contract(provider, alunaToken);
       const tokenTwoContract = getERC20Contract(provider, tokenTwo);
       const lpTokenContract = getERC20Contract(provider, lpTokenAddress);
       const totalBalancerAmount =
@@ -325,7 +326,7 @@ export const getBalancerPoolPriceInUSD = async (
       const boostPerBalancer = totalBoostAmount / totalBalancerAmount;
       const tokenTwoPerBalancer = totalTokenTwoAmount / totalBalancerAmount;
       if (data) {
-        const boostPriceInUSD = data[boostToken.toLowerCase()].usd;
+        const boostPriceInUSD = data[alunaToken.toLowerCase()].usd;
         const tokenTwoPriceInUSD = data[tokenTwo.toLowerCase()].usd;
         const balancerPrice =
           boostPerBalancer * boostPriceInUSD +

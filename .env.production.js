@@ -18,6 +18,7 @@ module.exports = {
 
   ALN_TOKEN: "0x8185bc4757572da2a610f887561c32298f1a5748",
 
+  WETH_TOKEN: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
   // pools
 
   ALN_POOL_1: "0x1234",
