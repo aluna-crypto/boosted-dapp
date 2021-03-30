@@ -46,7 +46,7 @@ export const Header = ({ changingRoute }) => {
           fontSize={["sm", "lg"]}
           m="4"
           fontWeight="300"
-          href="https://medium.com/@aluna/aln-tokenomics-fair-distribution-community-owned-self-governed-6b309fa24f49"
+          href="https://aluna.medium.com/aluna-liquidity-mining-program-enlist-earn-aln-500c9b111c85"
           target="_blank"
         >
           ABOUT
