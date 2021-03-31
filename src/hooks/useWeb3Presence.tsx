@@ -1,19 +1,14 @@
 import { useCallback, useEffect, useState } from "react";
-import { provider } from "web3-core";
-
-declare global {
-  interface Window {
-    ethereum: provider;
-  }
-}
+import detectEthereumProvider from '@metamask/detect-provider'
 
 export const useWeb3Presence = () => {
   const [present, setPresent] = useState<boolean>(false);
   const fetchWeb3Presence = useCallback(async () => {
-    if (typeof window.ethereum !== "undefined") {
-      setPresent(true);
+    const provider = await detectEthereumProvider()
+    if (provider) {
+      setPresent(true)
     } else {
-      setPresent(false);
+      setPresent(false)
     }
   }, []);
 
