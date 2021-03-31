@@ -17,12 +17,12 @@ export const Header = ({ changingRoute }) => {
           ? "url('/images/farmplants.jpg')"
           : "url('/images/farm.jpg')"
       }
-      bgPos="center"
+      bgPos="top"
       bgRepeat="no-repeat"
-      bgSize="contain"
-      height="60vh"
+      bgSize={["40vh", "40%", "50%"]}
+      height={["15vh", "15vh", "40vh"]}
     >
-      <Flex flex="1" alignItems="center">
+      <Flex flex={[2, 1, 1]} alignItems="center">
         <Heading
           fontSize={"lg"}
           fontWeight="normal"
