@@ -22,7 +22,7 @@ export const CTA: React.FC = () => {
   return (
     <Container
       flexDirection="row"
-      position="fixed"
+      position={["absolute", "fixed", "fixed"]}
       bottom="10"
       width="100%"
       maxWidth="48rem"
