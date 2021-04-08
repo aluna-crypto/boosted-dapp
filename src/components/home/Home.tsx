@@ -19,6 +19,7 @@ export const Home: React.FC = () => {
     <Flex
       justifyContent="space-between"
       width="100%"
+      minH="600px"
       flexDirection={["column", "column", "row"]}
     >
       <Box flex={1}>
