@@ -40,7 +40,7 @@ export const BoostPanel: React.FC<BoostPanelProps> = ({ pool }) => {
       const { data } = await coinGecko.simple.fetchTokenPrice({
         contract_addresses: [boostTokenProduction],
         vs_currencies: "usd",
-      })
+      });
       const priceInUSD = new BN(data[boostTokenProduction.toLowerCase()].usd);
 
       setUSDBoosterPrice(
@@ -85,13 +85,13 @@ export const BoostPanel: React.FC<BoostPanelProps> = ({ pool }) => {
   return (
     <Stack spacing={12} py={8}>
       <Flex justifyContent="space-between">
-        <Text fontWeight="bold">BOOST Balance</Text>
-        <Text textAlign="right">{getDisplayBalance(boostBalance)} BOOST</Text>
+        <Text fontWeight="bold">ALN Balance</Text>
+        <Text textAlign="right">{getDisplayBalance(boostBalance)} ALN</Text>
       </Flex>
       <Flex justifyContent="space-between">
         <Text fontWeight="bold">Cost of BOOSTER</Text>
         <Text textAlign="right">
-          {pool.boosterPrice ? getDisplayBalance(pool.boosterPrice) : 0} BOOST
+          {pool.boosterPrice ? getDisplayBalance(pool.boosterPrice) : 0} ALN
         </Text>
       </Flex>
       <Flex justifyContent="space-between">

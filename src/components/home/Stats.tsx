@@ -3,7 +3,7 @@ import { StatBox } from "./StatBox";
 import { alunaToken } from "../../constants/tokenAddresses";
 import { useTokenBalance } from "src/hooks/useTokenBalance";
 // import { useTotalSupply } from "src/hooks/useTotalSupply";
-// import { useTreasuryBalance } from "src/hooks/useTreasuryBalance";
+import { useTreasuryBalance } from "src/hooks/useTreasuryBalance";
 import { useTotalValueLocked } from "src/hooks/useTotalValueLocked";
 import { useGetTotalRewardAmount } from "src/hooks/useGetTotalRewardAmount";
 // import { useBoostPrice } from "src/hooks/useBoostPrice";
@@ -18,7 +18,7 @@ export const Stats: React.FC = () => {
   );
   // irrelevant to show ALN total supply as it's fixed at 10.000.000
   // const boostTotalSupply: string = getDisplayBalance(useTotalSupply());
-  // const treasuryBalance: string = getDisplayBalance(useTreasuryBalance());
+  const treasuryBalance: string = getDisplayBalance(useTreasuryBalance());
   const totalValueLocked: string = useTotalValueLocked();
   // const boostPrice: string = useBoostPrice();
   const alunaPrice: string = useAlunaPrice();
@@ -50,11 +50,11 @@ export const Stats: React.FC = () => {
         value={boostTotalSupply}
         tokenTicker={"BOOST"}
       /> */}
-      {/* <StatBox
+      <StatBox
         title="TREASURY VALUE"
         tokenTicker={"USD"}
         value={treasuryBalance}
-      /> */}
+      />
     </Stack>
   );
 };
