@@ -4,8 +4,8 @@ import {
   Stack,
   Heading,
   Tabs,
-  // Tab,
-  // TabList,
+  Tab,
+  TabList,
   TabPanel,
   TabPanels,
   Flex,
@@ -23,6 +23,8 @@ const Pool: React.FC = () => {
   const currentPool = openPools.filter((e) => e.code === id);
 
   if (id && openPools && currentPool.length > 0) {
+    const isBoostEnabled = currentPool[0].boostEnabled;
+
     return (
       <Stack
         fontFamily="mono"
@@ -40,10 +42,21 @@ const Pool: React.FC = () => {
           </Heading>
         </Flex>
         <Tabs>
-          {/* <TabList>
-            <Tab _selected={{ color: "yellow.500", borderColor: "yellow.500"}}>Staking</Tab>
-            <Tab _selected={{ color: "yellow.500", borderColor: "yellow.500"}}>Boosting</Tab>
-          </TabList> */}
+          {isBoostEnabled && (
+            <TabList>
+              <Tab
+                _selected={{ color: "yellow.500", borderColor: "yellow.500" }}
+              >
+                Staking
+              </Tab>
+              <Tab
+                _selected={{ color: "yellow.500", borderColor: "yellow.500" }}
+              >
+                Boosting
+              </Tab>
+            </TabList>
+          )}
+
           <TabPanels>
             <TabPanel>
               <StakingPanel pool={currentPool[0]} />

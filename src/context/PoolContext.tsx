@@ -32,6 +32,7 @@ export const ALL_POOLS = [
   {
     name: "ALN-ETH-LP",
     code: "aln-eth-lp",
+    boostEnabled: false,
     order: 1,
     icon: "/images/aluna-icon.png",
     address: "0x99a86705DA25A6d13A06f713871a8BBB8292c1b8",
@@ -42,6 +43,20 @@ export const ALL_POOLS = [
     underlyingToken: wETHToken,
     url:
       "https://app.uniswap.org/#/add/0x8185bc4757572da2a610f887561c32298f1a5748/ETH",
+  },
+  {
+    name: "ALN",
+    code: "aln",
+    boostEnabled: true,
+    order: 1,
+    icon: "/images/aluna-icon.png",
+    address: "0xE15C4c314b34BF72b0cB34D81492416Cf08b3960",
+    tokenContract: "0xdbd2Ab43e210587a5baE17BBd82650796C480f3a",
+    tokenTicker: "aln",
+    open: true,
+    // underlyingToken: alunaToken,
+    url:
+      "https://app.uniswap.org/#/add/0x005882F1334f76e798fFBE7ec3a220e1Fd0175fd/ETH",
   },
   // {
   //   name: "UNI-ALN-BOOST",
@@ -114,6 +129,7 @@ export interface IPool {
   name: string;
   icon: string;
   code: string;
+  boostEnabled?: boolean;
   order: number;
   address: string;
   tokenContract: string;
@@ -157,6 +173,7 @@ export const PoolProvider: React.FC = ({ children }) => {
         name: pool.name,
         icon: pool.icon,
         code: pool.code,
+        boostEnabled: pool.boostEnabled,
         order: pool.order,
         address: pool.address,
         tokenContract: pool.tokenContract,
@@ -202,6 +219,7 @@ export const PoolProvider: React.FC = ({ children }) => {
         name: pool.name,
         icon: pool.icon,
         code: pool.code,
+        boostEnabled: pool.boostEnabled,
         order: pool.order,
         address: pool.address,
         tokenContract: pool.tokenContract,
