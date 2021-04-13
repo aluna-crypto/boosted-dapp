@@ -46,7 +46,7 @@ export const Header = ({ changingRoute }) => {
           fontSize={["sm", "lg"]}
           m="4"
           fontWeight="300"
-          href="https://aluna.medium.com/aluna-liquidity-mining-program-enlist-earn-aln-500c9b111c85"
+          href="https://aluna.medium.com/aluna-farm-v2-stablecoin-liquidity-mining-pools-aln-staking-yield-boosters-burn-and-treasury-efe267fe99ea"
           target="_blank"
         >
           ABOUT
