@@ -65,11 +65,25 @@ export const ALL_POOLS = [
     icon: "/images/usdt@2x.png",
     address: "0x386460a3179089c41e4Cf6a31aac37a75aCf0AD3",
     tokenContract: "0xc8cd7fc5723098801c6a9071647cfde491327342",
-    tokenTicker: "aln",
+    tokenTicker: "aln-usdt-lp",
     open: true,
-    underlyingToken: alunaToken,
+    underlyingToken: "0xdac17f958d2ee523a2206206994597c13d831ec7",
     url:
       "https://app.uniswap.org/#/add/0x8185bc4757572da2a610f887561c32298f1a5748/0xdac17f958d2ee523a2206206994597c13d831ec7",
+  },
+  {
+    name: "ALN-USDC-LP",
+    code: "aln-usdc-lp",
+    boostEnabled: true,
+    order: 4,
+    icon: "/images/usdc@2x.png",
+    address: "0xB05893DC580265b838e2F70011c17D97E1fcE061",
+    tokenContract: "0x7651d41ba5864feaeac639e47421a283b5639a5b",
+    tokenTicker: "aln-usdc-lp",
+    open: true,
+    underlyingToken: "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+    url:
+      "https://app.uniswap.org/#/add/0x8185bc4757572da2a610f887561c32298f1a5748/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
   },
   // {
   //   name: "UNI-ALN-BOOST",
