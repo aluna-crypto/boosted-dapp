@@ -134,7 +134,7 @@ export const BoostPanel: React.FC<BoostPanelProps> = ({ pool }) => {
           disabled={requestedApproval}
           onClick={() => handleApprove()}
         >
-          {requestedApproval ? "Approving..." : "Approve BOOST"}
+          {requestedApproval ? "Approving..." : "Approve ALN"}
         </Button>
       ) : (
         <Button
