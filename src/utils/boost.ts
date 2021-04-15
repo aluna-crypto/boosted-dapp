@@ -344,6 +344,26 @@ export const getBalancerPoolPriceInUSD = async (
       console.log(e);
       return 0;
     }
+  } else if(provider && coinGecko && lpTokenAddress) {
+
+    const { data } = await coinGecko.simple.fetchTokenPrice({
+      contract_addresses: [lpTokenAddress],
+      vs_currencies: "usd",
+    });
+
+    const poolContract = getPoolContract(provider, poolAddress);
+
+    const poolSize =
+    (await poolContract.methods.totalSupply().call()) / 1e18;
+
+    if (data) {
+      const lpPriceInUSD = data[lpTokenAddress.toLowerCase()].usd;
+
+      return lpPriceInUSD * poolSize
+    } else {
+      return 0;
+    }
+    return 1
   } else {
     return 0;
   }
@@ -649,7 +669,7 @@ export const getBalancerAPY = async (
   provider: provider,
   coinGecko: any,
   poolAddress: string,
-  lpTokenContract: string,
+  lpTokenAddress: string,
   tokenTwo?: string
 ) => {
   if (provider && coinGecko && tokenTwo) {
@@ -657,7 +677,7 @@ export const getBalancerAPY = async (
       const poolContract = getPoolV2Contract(provider, poolAddress);
       const boostContract = getERC20Contract(provider, alunaToken);
       const tokenTwoContract = getERC20Contract(provider, tokenTwo);
-      const balancerTokenContract = getERC20Contract(provider, lpTokenContract);
+      const balancerTokenContract = getERC20Contract(provider, lpTokenAddress);
 
       const weeklyRewards = await getWeeklyRewards(poolContract);
 
@@ -668,9 +688,9 @@ export const getBalancerAPY = async (
         (await balancerTokenContract.methods.totalSupply().call()) / 1e18;
 
       const totalBoostAmount =
-        (await boostContract.methods.balanceOf(lpTokenContract).call()) / 1e18;
+        (await boostContract.methods.balanceOf(lpTokenAddress).call()) / 1e18;
       const totalTokenTwoAmount =
-        (await tokenTwoContract.methods.balanceOf(lpTokenContract).call()) /
+        (await tokenTwoContract.methods.balanceOf(lpTokenAddress).call()) /
         10 ** (await tokenTwoContract.methods.decimals().call());
 
       const boostPerBalancer = totalBoostAmount / totalBalancerAmount;
@@ -700,6 +720,33 @@ export const getBalancerAPY = async (
       console.log(e);
       return null;
     }
+  } else if(provider && coinGecko && lpTokenAddress) {
+
+    const { data } = await coinGecko.simple.fetchTokenPrice({
+      contract_addresses: [lpTokenAddress, alunaToken],
+      vs_currencies: "usd",
+    });
+
+    const poolContract = getPoolContract(provider, poolAddress);
+
+    const weeklyRewards = await getWeeklyRewards(poolContract);
+
+    const rewardPerToken =
+      weeklyRewards / (await poolContract.methods.totalSupply().call());
+
+    if (data) {
+      const lpPriceInUSD = data[lpTokenAddress.toLowerCase()].usd;
+      const alunaPriceInUSD = data[alunaToken.toLowerCase()].usd;
+
+      const BoostWeeklyROI =
+      (rewardPerToken * alunaPriceInUSD * 100) / lpPriceInUSD;
+
+      const apy = BoostWeeklyROI * 52;
+      return Number(apy.toFixed(2));
+    } else {
+      return 0;
+    }
+    return 1
   } else {
     return null;
   }

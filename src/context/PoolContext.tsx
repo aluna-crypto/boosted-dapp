@@ -54,7 +54,6 @@ export const ALL_POOLS = [
     tokenContract: "0x8185bc4757572da2a610f887561c32298f1a5748",
     tokenTicker: "aln",
     open: true,
-    underlyingToken: alunaToken,
     url: "https://www.coingecko.com/en/coins/aluna",
   },
   {
