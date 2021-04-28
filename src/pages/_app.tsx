@@ -74,8 +74,10 @@ function MyApp({ Component, pageProps }) {
                       web3 provider.
                     </Heading>
                     <Text py={2} px={2} textAlign="center" fontSize="md">
-                      Please switch to a web3 compatible browser to use
-                      aluna.social/farm
+                      Please switch a web3 compatible browser alternatively
+                      install <a href="https://metamask.io/" target="_blank" rel="noreferrer"><b><u>MetaMask</u></b></a>
+                      &nbsp;or <a href="https://walletconnect.org/" target="_blank" rel="noreferrer"><b><u>Wallet Connect</u></b></a> to
+                      get started
                     </Text>
                   </Flex>
                 ) : (
