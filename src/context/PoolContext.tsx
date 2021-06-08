@@ -30,6 +30,33 @@ import { usePriceFeedContext } from "./PriceFeedContext";
 
 export const ALL_POOLS = [
   {
+    name: "ALN-ETH-LP-2",
+    code: "aln-eth-lp-2",
+    boostEnabled: false,
+    order: 1,
+    icon: "/images/eth@2x.png",
+    address: "0xB7EaacB04292afB5D27C43AA236350b72833445E",
+    tokenContract: "0xdc3f6f4c00b55f56d5ef6293b762c6483af24a82",
+    tokenTicker: "aln-eth-lp",
+    open: true,
+    // Since the pool is ALN-ETH the underlying token should be WETH
+    underlyingToken: wETHToken,
+    url:
+      "https://app.uniswap.org/#/add/0x8185bc4757572da2a610f887561c32298f1a5748/ETH",
+  },
+  {
+    name: "ALN-2",
+    code: "aln-2",
+    boostEnabled: false,
+    order: 2,
+    icon: "/images/aluna-icon.png",
+    address: "0x0b0a68b9DfC0A2Ac9023e0eF4EBa3CB61D8704d1",
+    tokenContract: "0x8185bc4757572da2a610f887561c32298f1a5748",
+    tokenTicker: "aln",
+    open: true,
+    url: "https://www.coingecko.com/en/coins/aluna",
+  },
+  {
     name: "ALN-ETH-LP",
     code: "aln-eth-lp",
     boostEnabled: false,
