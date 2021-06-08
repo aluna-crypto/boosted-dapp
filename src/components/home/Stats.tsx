@@ -50,11 +50,11 @@ export const Stats: React.FC = () => {
         value={boostTotalSupply}
         tokenTicker={"BOOST"}
       /> */}
-      <StatBox
+      {/* <StatBox
         title="TREASURY VALUE"
         tokenTicker={"USD"}
         value={treasuryBalance}
-      />
+      /> */}
     </Stack>
   );
 };
