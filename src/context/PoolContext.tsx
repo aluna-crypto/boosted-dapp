@@ -30,8 +30,8 @@ import { usePriceFeedContext } from "./PriceFeedContext";
 
 export const ALL_POOLS = [
   {
-    name: "ALN-ETH-LP-2",
-    code: "aln-eth-lp-2",
+    name: "ALN-ETH-LP-v2",
+    code: "aln-eth-lp-v2",
     boostEnabled: false,
     order: 1,
     icon: "/images/eth@2x.png",
@@ -45,8 +45,8 @@ export const ALL_POOLS = [
       "https://app.uniswap.org/#/add/0x8185bc4757572da2a610f887561c32298f1a5748/ETH",
   },
   {
-    name: "ALN-2",
-    code: "aln-2",
+    name: "ALN-v2",
+    code: "aln-v2",
     boostEnabled: false,
     order: 2,
     icon: "/images/aluna-icon.png",
