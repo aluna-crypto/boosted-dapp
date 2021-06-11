@@ -18,7 +18,7 @@ export const Stats: React.FC = () => {
   );
   // irrelevant to show ALN total supply as it's fixed at 10.000.000
   // const boostTotalSupply: string = getDisplayBalance(useTotalSupply());
-  const treasuryBalance: string = getDisplayBalance(useTreasuryBalance());
+  // const treasuryBalance: string = getDisplayBalance(useTreasuryBalance());
   const totalValueLocked: string = useTotalValueLocked();
   // const boostPrice: string = useBoostPrice();
   const alunaPrice: string = useAlunaPrice();
