@@ -3,7 +3,7 @@ import { StatBox } from "./StatBox";
 import { alunaToken } from "../../constants/tokenAddresses";
 import { useTokenBalance } from "src/hooks/useTokenBalance";
 // import { useTotalSupply } from "src/hooks/useTotalSupply";
-import { useTreasuryBalance } from "src/hooks/useTreasuryBalance";
+// import { useTreasuryBalance } from "src/hooks/useTreasuryBalance";
 import { useTotalValueLocked } from "src/hooks/useTotalValueLocked";
 import { useGetTotalRewardAmount } from "src/hooks/useGetTotalRewardAmount";
 // import { useBoostPrice } from "src/hooks/useBoostPrice";
