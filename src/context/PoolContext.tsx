@@ -38,7 +38,7 @@ export const ALL_POOLS = [
     address: "0xB7EaacB04292afB5D27C43AA236350b72833445E",
     tokenContract: "0xdc3f6f4c00b55f56d5ef6293b762c6483af24a82",
     tokenTicker: "aln-eth-lp",
-    open: false,
+    open: true,
     // Since the pool is ALN-ETH the underlying token should be WETH
     underlyingToken: wETHToken,
     url:
@@ -53,7 +53,7 @@ export const ALL_POOLS = [
     address: "0x0b0a68b9DfC0A2Ac9023e0eF4EBa3CB61D8704d1",
     tokenContract: "0x8185bc4757572da2a610f887561c32298f1a5748",
     tokenTicker: "aln",
-    open: false,
+    open: true,
     url: "https://www.coingecko.com/en/coins/aluna",
   },
   {
