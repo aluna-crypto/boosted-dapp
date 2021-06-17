@@ -65,7 +65,7 @@ export const ALL_POOLS = [
     address: "0x99a86705DA25A6d13A06f713871a8BBB8292c1b8",
     tokenContract: "0xdc3f6f4c00b55f56d5ef6293b762c6483af24a82",
     tokenTicker: "aln-eth-lp",
-    open: false,
+    open: true,
     // Since the pool is ALN-ETH the underlying token should be WETH
     underlyingToken: wETHToken,
     url:
@@ -80,7 +80,7 @@ export const ALL_POOLS = [
     address: "0xb0DBA13A65A06EE6cEFe63e0eb3A0fd6349a9D12",
     tokenContract: "0x8185bc4757572da2a610f887561c32298f1a5748",
     tokenTicker: "aln",
-    open: false,
+    open: true,
     url: "https://www.coingecko.com/en/coins/aluna",
   },
   {
@@ -92,7 +92,7 @@ export const ALL_POOLS = [
     address: "0x386460a3179089c41e4Cf6a31aac37a75aCf0AD3",
     tokenContract: "0xc8cd7fc5723098801c6a9071647cfde491327342",
     tokenTicker: "aln-usdt-lp",
-    open: false,
+    open: true,
     underlyingToken: "0xdac17f958d2ee523a2206206994597c13d831ec7",
     url:
       "https://app.uniswap.org/#/add/0x8185bc4757572da2a610f887561c32298f1a5748/0xdac17f958d2ee523a2206206994597c13d831ec7",
@@ -106,7 +106,7 @@ export const ALL_POOLS = [
     address: "0xB05893DC580265b838e2F70011c17D97E1fcE061",
     tokenContract: "0x7651d41ba5864feaeac639e47421a283b5639a5b",
     tokenTicker: "aln-usdc-lp",
-    open: false,
+    open: true,
     underlyingToken: "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
     url:
       "https://app.uniswap.org/#/add/0x8185bc4757572da2a610f887561c32298f1a5748/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
