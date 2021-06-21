@@ -26,6 +26,13 @@ class MyDocument extends Document {
             crossOrigin=""
           />
           <link rel="shortcut icon" href="/images/favicon.ico" />
+
+          <title>Aluna Social Farm</title>
+
+          <meta
+            name="description"
+            content="A dApp for ALN holders to earn rewards through staking."
+          ></meta>
         </Head>
         <body>
           <InitializeColorMode />

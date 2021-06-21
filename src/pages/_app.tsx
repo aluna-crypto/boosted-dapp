@@ -75,9 +75,27 @@ function MyApp({ Component, pageProps }) {
                     </Heading>
                     <Text py={2} px={2} textAlign="center" fontSize="md">
                       Please switch a web3 compatible browser alternatively
-                      install <a href="https://metamask.io/" target="_blank" rel="noreferrer"><b><u>MetaMask</u></b></a>
-                      &nbsp;or <a href="https://walletconnect.org/" target="_blank" rel="noreferrer"><b><u>Wallet Connect</u></b></a> to
-                      get started
+                      install{" "}
+                      <a
+                        href="https://metamask.io/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <b>
+                          <u>MetaMask</u>
+                        </b>
+                      </a>
+                      &nbsp;or{" "}
+                      <a
+                        href="https://walletconnect.org/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <b>
+                          <u>Wallet Connect</u>
+                        </b>
+                      </a>{" "}
+                      to get started
                     </Text>
                   </Flex>
                 ) : (
@@ -94,7 +112,7 @@ function MyApp({ Component, pageProps }) {
           </PoolProvider>
         </UseWalletProvider>
       </PriceFeedProvider>
-      <title>Aluna Social Farm</title>
+
       <style jsx global>{`
         @font-face {
           font-family: "Formular-Mono";
